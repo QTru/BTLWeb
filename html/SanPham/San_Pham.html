@@ -295,50 +295,51 @@
 </head>
 
 <body>
-    <div class="wrapper d-flex flex-column min-vh-100" style="background-color: #173d58; margin-top: -10px;">
-        <div class="header">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-xl p-1" style="background-color: #173d58;">
-                    <a style="margin-right: 45%;" class="navbar-brand text-white" href="#">Logo</a>
-                    <button class="navbar-toggler m-1" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation" style="background-color: aliceblue;">
+    <div class="wrapper d-flex flex-column min-vh-100 container-fluid" style="background-color: #173d58; margin-top: -10px;">
+        <header class="mb-xl-5">
+            <nav class="navbar navbar-expand-xl navbar-dark fixed-top px-xl-5" style="background-color: #183c5c;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../html/TrangChu.html">Sporty</a>
+                    <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mt-3" style="font-size: 18px;">
-                            <li class="nav-item me-2">
-                                <a class="nav-link text-white" aria-current="page" href="#">Trang chủ</a>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../html/TrangChu.html" aria-current="page">Trang
+                                    chủ</a>
                             </li>
-                            <li class="nav-item dropdown me-2" style="font-size: 18px; ">
-                                <a class="nav-link dropdown-toggle" style="color: #e74c3c;" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownSP" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
                                     Sản phẩm
                                 </a>
-                                <ul class="dropdown-menu" style="font-size: 18px;">
-                                    <li><a class="dropdown-item" href="#">Dụng cụ bơi</a></li>
-                                    <li><a class="dropdown-item" href="#">Đồ bơi</a></li>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownSP">
+                                    <li><a class="dropdown-item" href="../html/SanPham.html">Dụng cụ tập gym</a></li>
+                                    <li><a class="dropdown-item" href="../html/SanPham.html">Dụng cụ bơi</a></li>
+                                    <li><a class="dropdown-item" href="../html/SanPham.html">Máy chạy bộ</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item me-2" style="font-size: 18px;">
-                                <a class="nav-link text-white" href="#">Giới thiệu</a>
-                            </li>
-                            <li class="nav-item me-2" style="font-size: 18px;">
-                                <a class="nav-link text-white" href="#">Liên hệ</a>
-                            </li>
-                            <li class="nav-item me-2" style="font-size: 18px; ">
-                                <a class="nav-link" style="color: #e74c3c;" href="#"> <i class="fas fa-user me-1"></i>
-                                    Đăng nhập</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/GioiThieu.html" aria-current="page">Giới thiệu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" style="color: #e74c3c;" href="#"> <i
-                                        class="fas fa-shopping-cart me-1"></i> Giỏ hàng</a>
+                                <a class="nav-link" href="../html/LienHe.html" aria-current="page">Liên hệ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/DangNhap.html"> <i class="fas fa-user me-1"></i> Đăng
+                                    nhập</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"> <i class="fas fa-shopping-cart me-1"></i> Giỏ hàng</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        </div>
+        </header>
 
         <div class="main-content flex-grow-1">
             <div class="container-xxl px-3 px-md-4 px-lg-5 mx-auto" style="max-width: 1600px;">
@@ -681,205 +682,193 @@
                     </div>
                 </div>
             </div>
-            </main>
-            <!-- Thêm phần đăng ký nhận ưu đãi -->
-            <div class="m-5">
-                <section class="newsletter-section" style="background-color: #e53935;">
-                    <div class="container text-white">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8 text-center">
-                                <h2 class="mb-3">Đăng ký ngay để được giảm 200k đơn tiếp theo</h2>
-
-                                <div class="input-email mb-3 mx-auto" style="max-width: 500px;">
-                                    <input id="emailInput" type="email" class="form-control p"
-                                        placeholder="Nhập email của bạn ở dưới*">
-                                </div>
-                                <div class="input-btn mb-3 mx-auto" style="max-width: 500px;">
-                                    <button class="btn_DangKy btn btn-light w-100" type="button"
-                                        style=" color: #e74c3c;" onclick="validateEmail()">Đăng ký ngay</button>
-                                </div>
-                                <p id="errorMessage" class="text-white text-center" style="display: none;">Vui lòng
-                                    nhập email hợp lệ!</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Thêm footer -->
-                <footer class="footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <h5>Mua sắm</h5>
-                                <ul>
-                                    <li><a href="#">Đồ bơi</a></li>
-                                    <li><a href="#">Phụ kiện</a></li>
-                                    <li><a href="#">Giảm giá</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <h5>Thông tin</h5>
-                                <ul>
-                                    <li><a href="#">Hỏi đáp</a></li>
-                                    <li><a href="#">Giao hàng & Trả hàng</a></li>
-                                    <li><a href="#">Chính sách cửa hàng</a></li>
-                                    <li><a href="#">Phương thức thanh toán</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <h5>Khám phá</h5>
-                                <ul>
-                                    <li><a href="#">Giới thiệu</a></li>
-                                    <li><a href="#">Liên hệ</a></li>
-                                    <li><a href="#">Đại lý</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <h5>Dịch vụ khách hàng</h5>
-                                <ul>
-                                    <li>Điện thoại: 024 3456 7880</li>
-                                    <li>Email: lienhe@web.com</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
         </div>
 
-        <script>
-            // Hiển thị/ẩn bộ lọc
-            function animationBoLoc(id) {
-                const content = document.getElementById(id);
-                const icon = document.getElementById('icon-' + id);
-                const isOpen = content.classList.toggle('show');
-                icon.textContent = isOpen ? '-' : '+';
-                if (isOpen) {
-                    content.style.animation = 'fadeIn 0.3s ease-in-out';
+        <!-- Thêm phần đăng ký nhận ưu đãi -->
+        <footer>
+            <div class="row py-5 mx-auto text-light mt-5" style="background-color: #e74c3c;">
+                <div class="col-4 mx-auto">
+                    <h4 class=" fw-normal text-nowrap">Đăng ký ngay để được giảm 200k đơn tiếp theo</h4>
+                    <form>
+                        <input class="form-control mt-3 text-light ps-3" type="text" name="Email" id="Email"
+                            style="border-radius: 0; border: 4px solid #e08898; background-color: #e74c3c;"
+                            placeholder="Nhập email của bạn ở đây">
+                        <button class="btn w-100 btn-light mt-3" type="submit"
+                            style="border-radius: 0 12px 0 0; color: #e74c3c;">Đăng
+                            ký
+                            ngay</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row py-5 mx-auto px-xl-5 text-nowrap" style="background-color: #101c2c;">
+                <div class="col-2 mx-auto">
+                    <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Mua sắm</h4>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham.html">Nữ</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham.html">Nam</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham.html">Phụ kiện</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham.html">Giảm giá</a>
+                </div>
+                <div class="col-2 mx-auto">
+                    <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Thông tin</h4>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/HoiDap.html">Hỏi đáp</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/GiaoTra.html">Giao hàng &
+                        Trả
+                        hàng</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/ChinhSach.html">Chính sách
+                        cửa
+                        hàng </a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/ThanhToan.html">Phương thức
+                        thanh toán</a>
+                </div>
+                <div class="col-2 mx-auto">
+                    <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Khám phá</h4>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/GioiThieu.html">Giới
+                        thiệu</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/LienHe.html">Liên hệ</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/LienHe.html">Đại lý</a>
+                </div>
+                <div class="col-2 mx-auto">
+                    <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Dịch vụ khách hàng</h4>
+                    <a class="link-secondary d-block text-decoration-none" href="tel:0999-123-456">Điện thoại: 0999
+                        123
+                        456</a>
+                    <a class="link-secondary d-block text-decoration-none" href="mailto:buiquoctru@gmail.com">Email:
+                        buiquoctru@gmail.com</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Hiển thị/ẩn bộ lọc
+        function animationBoLoc(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            const isOpen = content.classList.toggle('show');
+            icon.textContent = isOpen ? '-' : '+';
+            if (isOpen) {
+                content.style.animation = 'fadeIn 0.3s ease-in-out';
+            } else {
+                content.style.animation = 'none';
+            }
+        }
+
+        // Lọc sản phẩm theo bộ sưu tập
+        function filterByCollection(collection) {
+            const products = document.querySelectorAll('.product-container');
+            // Xử lý chuỗi collection giống như trong code (bỏ dấu, khoảng trắng)
+            const normalizedCollection = collection.toLowerCase()
+                .replace(/\s/g, '')
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
+            products.forEach(product => {
+                const productCard = product.querySelector('.product-card');
+                if (!productCard) return;
+
+                const productType = productCard.getAttribute('data-type');
+                if (normalizedCollection === 'tatca' || normalizedCollection === '') {
+                    product.style.display = 'block'; // Hiển thị tất cả sản phẩm
+                } else if (productType === normalizedCollection) {
+                    product.style.display = 'block'; // Hiển thị sản phẩm phù hợp
                 } else {
-                    content.style.animation = 'none';
+                    product.style.display = 'none'; // Ẩn sản phẩm không phù hợp
                 }
-            }
-
-            // Lọc sản phẩm theo bộ sưu tập
-            function filterByCollection(collection) {
-                const products = document.querySelectorAll('.product-container');
-                // Xử lý chuỗi collection giống như trong code (bỏ dấu, khoảng trắng)
-                const normalizedCollection = collection.toLowerCase()
-                    .replace(/\s/g, '')
-                    .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "");
-
-                products.forEach(product => {
-                    const productCard = product.querySelector('.product-card');
-                    if (!productCard) return;
-
-                    const productType = productCard.getAttribute('data-type');
-                    if (normalizedCollection === 'tatca' || normalizedCollection === '') {
-                        product.style.display = 'block'; // Hiển thị tất cả sản phẩm
-                    } else if (productType === normalizedCollection) {
-                        product.style.display = 'block'; // Hiển thị sản phẩm phù hợp
-                    } else {
-                        product.style.display = 'none'; // Ẩn sản phẩm không phù hợp
-                    }
-                });
-            }
-
-            // Hàm định dạng số tiền
-            function formatPrice(price) {
-                return new Intl.NumberFormat('vi-VN').format(price) + ' ₫';
-            }
-
-            // Hàm chuyển đổi từ chuỗi tiền tệ về số
-            function parsePrice(priceStr) {
-                const numStr = priceStr.replace(/[^\d]/g, '');
-                return parseInt(numStr, 10) || 0;
-            }
-
-            // Xử lý sự kiện khi kéo thanh trượt
-            document.getElementById('priceSlider').addEventListener('input', function () {
-                const price = parseInt(this.value);
-                document.getElementById('priceInput').value = formatPrice(price);
-                filterByPrice(price);
             });
+        }
 
-            // Xử lý sự kiện khi nhập giá
-            document.getElementById('priceInput').addEventListener('change', function () {
-                const enteredPrice = parsePrice(this.value);
-                const minPrice = parseInt(document.getElementById('priceSlider').min);
-                const maxPrice = parseInt(document.getElementById('priceSlider').max);
+        // Hàm định dạng số tiền
+        function formatPrice(price) {
+            return new Intl.NumberFormat('vi-VN').format(price) + ' ₫';
+        }
 
-                // Giới hạn giá trị nhập vào trong khoảng min-max
-                let adjustedPrice = enteredPrice;
-                if (enteredPrice < minPrice) adjustedPrice = minPrice;
-                if (enteredPrice > maxPrice) adjustedPrice = maxPrice;
+        // Hàm chuyển đổi từ chuỗi tiền tệ về số
+        function parsePrice(priceStr) {
+            const numStr = priceStr.replace(/[^\d]/g, '');
+            return parseInt(numStr, 10) || 0;
+        }
 
-                // Cập nhật giá trị
-                document.getElementById('priceSlider').value = adjustedPrice;
-                this.value = formatPrice(adjustedPrice);
-                filterByPrice(adjustedPrice);
-            });
+        // Xử lý sự kiện khi kéo thanh trượt
+        document.getElementById('priceSlider').addEventListener('input', function () {
+            const price = parseInt(this.value);
+            document.getElementById('priceInput').value = formatPrice(price);
+            filterByPrice(price);
+        });
 
-             // Xử lý sự kiện khi nhập để chỉ cho phép số
-             document.getElementById('priceInput').addEventListener('input', function (e) {
-                // Loại bỏ các ký tự không phải số
-                const sanitizedValue = this.value.replace(/[^\d]/g, '');
-                this.value = sanitizedValue;
-            });
+        // Xử lý sự kiện khi nhập giá
+        document.getElementById('priceInput').addEventListener('change', function () {
+            const enteredPrice = parsePrice(this.value);
+            const minPrice = parseInt(document.getElementById('priceSlider').min);
+            const maxPrice = parseInt(document.getElementById('priceSlider').max);
 
-            // Khởi tạo giá trị ban đầu
-            const initialPrice = 700000;
-            document.getElementById('priceSlider').value = initialPrice;
-            document.getElementById('priceInput').value = formatPrice(initialPrice);
+            // Giới hạn giá trị nhập vào trong khoảng min-max
+            let adjustedPrice = enteredPrice;
+            if (enteredPrice < minPrice) adjustedPrice = minPrice;
+            if (enteredPrice > maxPrice) adjustedPrice = maxPrice;
 
-            // Lọc sản phẩm theo giá
-            function filterByPrice(maxPrice) {
-                const products = document.querySelectorAll('.product-container');
-                products.forEach(product => {
-                    const productCard = product.querySelector('.product-card');
-                    if (!productCard) return;
+            // Cập nhật giá trị
+            document.getElementById('priceSlider').value = adjustedPrice;
+            this.value = formatPrice(adjustedPrice);
+            filterByPrice(adjustedPrice);
+        });
 
-                    const productPrice = parseInt(productCard.getAttribute('data-price'), 10);
-                    if (productPrice <= maxPrice) {
-                        product.style.display = 'block';
-                    } else {
-                        product.style.display = 'none';
-                    }
-                });
-            }
+        // Xử lý sự kiện khi nhập để chỉ cho phép số
+        document.getElementById('priceInput').addEventListener('input', function (e) {
+            // Loại bỏ các ký tự không phải số
+            const sanitizedValue = this.value.replace(/[^\d]/g, '');
+            this.value = sanitizedValue;
+        });
 
-            // Gắn sự kiện cho các liên kết trong "Bộ sưu tập"
-            document.querySelectorAll('#collection a').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
-                    const collection = this.textContent.trim(); // Lấy tiêu chí từ nội dung liên kết
-                    filterByCollection(collection); // Gọi hàm lọc theo bộ sưu tập
-                });
-            });
+        // Khởi tạo giá trị ban đầu
+        const initialPrice = 700000;
+        document.getElementById('priceSlider').value = initialPrice;
+        document.getElementById('priceInput').value = formatPrice(initialPrice);
 
-            // Gắn sự kiện cho thanh trượt giá
-            document.querySelector('.price-slider').addEventListener('input', function () {
-                const maxPrice = parseInt(this.value, 10); // Lấy giá trị tối đa từ thanh trượt
-                filterByPrice(maxPrice); // Gọi hàm lọc theo giá
-            });
+        // Lọc sản phẩm theo giá
+        function filterByPrice(maxPrice) {
+            const products = document.querySelectorAll('.product-container');
+            products.forEach(product => {
+                const productCard = product.querySelector('.product-card');
+                if (!productCard) return;
 
-            // Gắn sự kiện iểm tra Email cho nút "Đăng ký ngay"
-            function validateEmail() {
-                const emailInput = document.getElementById('emailInput');
-                const errorMessage = document.getElementById('errorMessage');
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                if (!emailPattern.test(emailInput.value)) {
-                    errorMessage.style.display = 'block'; // Hiển thị thông báo lỗi
+                const productPrice = parseInt(productCard.getAttribute('data-price'), 10);
+                if (productPrice <= maxPrice) {
+                    product.style.display = 'block';
                 } else {
-                    errorMessage.style.display = 'none'; // Ẩn thông báo lỗi
-                    alert('Đăng ký thành công!'); // Thông báo thành công
+                    product.style.display = 'none';
                 }
+            });
+        }
+
+        // Gắn sự kiện cho các liên kết trong "Bộ sưu tập"
+        document.querySelectorAll('#collection a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+                const collection = this.textContent.trim(); // Lấy tiêu chí từ nội dung liên kết
+                filterByCollection(collection); // Gọi hàm lọc theo bộ sưu tập
+            });
+        });
+
+        // Gắn sự kiện cho thanh trượt giá
+        document.querySelector('.price-slider').addEventListener('input', function () {
+            const maxPrice = parseInt(this.value, 10); // Lấy giá trị tối đa từ thanh trượt
+            filterByPrice(maxPrice); // Gọi hàm lọc theo giá
+        });
+
+        // Gắn sự kiện iểm tra Email cho nút "Đăng ký ngay"
+        function validateEmail() {
+            const emailInput = document.getElementById('emailInput');
+            const errorMessage = document.getElementById('errorMessage');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                errorMessage.style.display = 'block'; // Hiển thị thông báo lỗi
+            } else {
+                errorMessage.style.display = 'none'; // Ẩn thông báo lỗi
+                alert('Đăng ký thành công!'); // Thông báo thành công
             }
-        </script>
+        }
+    </script>
 
 </body>
 
