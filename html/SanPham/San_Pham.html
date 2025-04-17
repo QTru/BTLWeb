@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sản phẩm</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../../css/all.css" rel="stylesheet">
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <style>
         body {
@@ -118,9 +118,56 @@
             transition: all 0.3s ease;
         }
 
+        .price-input-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .price-input {
+            width: 100%;
+            padding: 8px 30px 8px 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        .currency-symbol {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+
+        /* Thêm style cho input khi focus */
+        .price-input:focus {
+            outline: none;
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+        }
+
         /*sản phẩm*/
+        .products-row {
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 0;
+            align-items: stretch;
+        }
+
+        .product-container {
+            flex: 0 0 calc(25% - 20px);
+            max-width: calc(25% - 20px);
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .product-container[style*="display: none"] {
+            display: none !important;
+        }
+
         .product-card {
-            width: 230px;
+            width: 100%;
             background-color: #fff;
             border-radius: 12px;
             overflow: hidden;
@@ -130,6 +177,9 @@
             transition: transform 0.3s;
         }
 
+        .product-container[style*="display: none"] {
+            display: none !important;
+        }
 
         .product-card:hover {
             transform: translateY(-5px);
@@ -241,25 +291,11 @@
             background-color: #e53935 !important;
             color: #fff !important;
         }
-
-        /* Điều chỉnh phần sản phẩm */
-        .products-row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: -10px;
-        }
-
-        .product-col {
-            flex: 0 0 25%;
-            max-width: 25%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid" style="background-color: #173d58; margin-top: -10px;">
+    <div class="wrapper d-flex flex-column min-vh-100" style="background-color: #173d58; margin-top: -10px;">
         <div class="header">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-xl p-1" style="background-color: #173d58;">
@@ -280,9 +316,8 @@
                                     Sản phẩm
                                 </a>
                                 <ul class="dropdown-menu" style="font-size: 18px;">
-                                    <li><a class="dropdown-item" href="#">Dụng cụ tập gym</a></li>
                                     <li><a class="dropdown-item" href="#">Dụng cụ bơi</a></li>
-                                    <li><a class="dropdown-item" href="#">Máy chạy bộ</a></li>
+                                    <li><a class="dropdown-item" href="#">Đồ bơi</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item me-2" style="font-size: 18px;">
@@ -305,359 +340,348 @@
             </nav>
         </div>
 
-        <h1 class="text-white text-center " style="font-size: 45px ; margin-top: 100px;">
-            DỤNG CỤ BƠI
-        </h1>
+        <div class="main-content flex-grow-1">
+            <div class="container-xxl px-3 px-md-4 px-lg-5 mx-auto" style="max-width: 1600px;">
+                <h1 class="text-white text-center " style="font-size: 45px ; margin-top: 100px;">
+                    DỤNG CỤ BƠI
+                </h1>
 
-        <div class="row container ms-5">
-            <div class="col-3 text-white">
-                <h3>Lọc Theo</h3>
+                <div class="row container ms-5">
+                    <div class="col-3 text-white">
+                        <h3>Lọc Theo</h3>
 
-                <!-- Bộ sưu tập -->
-                <div class="filter-group">
-                    <div class="filter-header" onclick="animationBoLoc('collection')">
-                        <span>Bộ sưu tập</span>
-                        <span id="icon-collection" class="icon-toggle">+</span>
-                    </div>
-                    <div id="collection" class="filter-content">
-                        <a href="#" style="text-decoration: none; display: block;"><strong>Tất cả</strong></a>
-                        <a href="#" style="text-decoration: none; display: block;">Kính bơi</a>
-                        <a href="#" style="text-decoration: none; display: block;">Mũ bơi</a>
-                        <a href="#" style="text-decoration: none; display: block;">Bình nước</a>
-                        <a href="#" style="text-decoration: none; display: block;">Túi thể thao</a>
-                    </div>
-                </div>
+                        <!-- Bộ sưu tập -->
+                        <div class="filter-group">
+                            <div class="filter-header" onclick="animationBoLoc('collection')">
+                                <span>Bộ sưu tập</span>
+                                <span id="icon-collection" class="icon-toggle">+</span>
+                            </div>
+                            <div id="collection" class="filter-content">
+                                <a href="#" style="text-decoration: none; display: block;"><strong>Tất cả</strong></a>
+                                <a href="#" style="text-decoration: none; display: block;">Kính bơi</a>
+                                <a href="#" style="text-decoration: none; display: block;">Mũ bơi</a>
+                                <a href="#" style="text-decoration: none; display: block;">Bình nước</a>
+                                <a href="#" style="text-decoration: none; display: block;">Túi thể thao</a>
+                            </div>
+                        </div>
 
-                <!-- Giá -->
-                <div class="filter-group">
-                    <div class="filter-header" onclick="animationBoLoc('price')">
-                        <span>Giá</span>
-                        <span id="icon-price" class="icon-toggle">+</span>
-                    </div>
-                    <div id="price" class="filter-content">
-                        <input type="range" min="150000" max="700000" value="150000" class="price-slider">
-                        <div class="range-labels">
-                            <span>150.000 ₫</span>
-                            <span>700.000 ₫</span>
+                        <!-- Giá -->
+                        <div class="filter-group">
+                            <div class="filter-header" onclick="animationBoLoc('price')">
+                                <span>Giá</span>
+                                <span id="icon-price" class="icon-toggle">+</span>
+                            </div>
+                            <div id="price" class="filter-content">
+                                <div class="price-input-container">
+                                    <input type="text" id="priceInput" class="price-input" value="700.000 ₫">
+                                    <span class="currency-symbol">₫</span>
+                                </div>
+                                <input type="range" min="150000" max="700000" step="50000" value="700000"
+                                    class="price-slider" id="priceSlider">
+                                <div class="range-labels">
+                                    <span>150.000 ₫</span>
+                                    <span>700.000 ₫</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Sản phẩm -->
-            <div class="col">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="kinhboi" data-price="260000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham1.jpg" alt="Sản phẩm">
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Kính bơi trẻ em AquaLite Xanh Dương</h3>
-                                            <p>260.000₫</p>
+                    <!-- Sản phẩm -->
+                    <div class="col">
+                        <div class="products-row d-inline-flex flex-wrap">
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="kinhboi" data-price="260000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham1.jpg" alt="Sản phẩm">
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
                                         </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="kinhboi" data-price="270000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham2.jpg" alt="Sản phẩm">
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Kính bơi trẻ em AquaLite Xanh Dương</h3>
+                                                <p>260.000₫</p>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Kính bơi truyền thống FitView Trắng Đen</h3>
-                                            <p>270.000₫</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="kinhboi" data-price="400000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham3.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Mới</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Kính bơi người lớn ProRacer Đỏ Đen</h3>
-                                            <p>400.000₫</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="kinhboi" data-price="150000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham4.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Giảm giá</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Kính bơi chuyên nghiệp SpeedEdge Xám Đen</h3>
-                                            <p><s style="color: gray; font-weight: normal;">250.000₫</s> 150.000₫</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                                </a>
+                            </div>
 
-                <div class="row">
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="muboi" data-price="300000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham5.jpg" alt="Sản phẩm">
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Mũ bơi silicon 3D Xanh Đậm Loang</h3>
-                                            <p>300.000₫</p>
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="kinhboi" data-price="270000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham2.jpg" alt="Sản phẩm">
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
                                         </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="muboi" data-price="160000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham6.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Giảm giá</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Kính bơi truyền thống FitView Trắng Đen</h3>
+                                                <p>270.000₫</p>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Mũ bơi silicon đen truyền thống</h3>
-                                            <p><s style="color: gray; font-weight: normal;">200.000₫</s> 160.000₫</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="muboi" data-price="280000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham7.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Mới</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Mũ bơi silicon 2 màu Xanh Trắng</h3>
-                                            <p>280.000₫</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="muboi" data-price="180000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham8.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Giảm giá</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Mũ bơi silicon trắng bóng đơn giản</h3>
-                                            <p><s style="color: gray; font-weight: normal;">250.000₫</s> 180.000₫</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                                </a>
+                            </div>
 
-                <div class="row">
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="binhnuoc" data-price="450000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham9.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Mới</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Bình nước lọc thông minh BluePure</h3>
-                                            <p>450.000₫</p>
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="kinhboi" data-price="400000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham3.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Mới</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
                                         </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="binhnuoc" data-price="270000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham10.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Mới</div>
-                                        <div class="quick-view">Xem chi tiết</div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Kính bơi người lớn ProRacer Đỏ Đen</h3>
+                                                <p>400.000₫</p>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Bình nước thể thao AquaTwist Xanh Dương</h3>
-                                            <p>270.000₫</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="binhnuoc" data-price="350000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham11.jpg" alt="Sản phẩm">
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Bình giữ nhiệt inox FitSteel Bạc</h3>
-                                            <p>350.000₫</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="binhnuoc" data-price="400000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham12.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Giảm giá</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Bình nước cầm tay SportMax Đen</h3>
-                                            <p><s style="color: gray; font-weight: normal;">500.000₫</s> 400.000₫</p>
-                                        </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                                </a>
+                            </div>
 
-                <div class="row">
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="tuithethao" data-price="600000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham13.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Giảm giá</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
-                                    </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Túi đựng đồ bơi Classic Bag Xanh Trắng</h3>
-                                            <p><s style="color: gray; font-weight: normal;">600.000₫</s> 400.000₫</p>
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="kinhboi" data-price="150000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham4.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Giảm giá</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
                                         </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="tuithethao" data-price="540000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham14.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Mới</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Kính bơi chuyên nghiệp SpeedEdge Xám Đen</h3>
+                                                <p><s style="color: gray; font-weight: normal;">250.000₫</s>
+                                                    150.000₫</p>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Ba lô thể thao UrbanFit Xanh Đen</h3>
-                                            <p>540.000₫</p>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="muboi" data-price="300000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham5.jpg" alt="Sản phẩm">
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
                                         </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="tuithethao" data-price="450000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham15.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Mới</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Mũ bơi silicon 3D Xanh Đậm Loang</h3>
+                                                <p>300.000₫</p>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Túi xách thể thao đa năng GymPro Xám Đen</h3>
-                                            <p>450.000₫</p>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="muboi" data-price="160000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham6.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Giảm giá</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
                                         </div>
-                                    </a>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-container">
-                            <a href="#">
-                                <div class="product-card" data-type="tuithethao" data-price="330000">
-                                    <div class="product-img">
-                                        <img src="../../imgs/imgs_SanPham/sanpham16.jpg" alt="Sản phẩm">
-                                        <div class="label-tag">Giảm giá</div>
-                                        <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Mũ bơi silicon đen truyền thống</h3>
+                                                <p><s style="color: gray; font-weight: normal;">200.000₫</s>
+                                                    160.000₫</p>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <a href="#" style="text-decoration: none;">
-                                        <div class="product-info">
-                                            <h3>Túi rút họa tiết LeafBag Xanh Lá</h3>
-                                            <p><s style="color: gray; font-weight: normal;">400.000₫</s> 330.000₫</p>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="muboi" data-price="280000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham7.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Mới</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
                                         </div>
-                                    </a>
-                                </div>
-                            </a>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Mũ bơi silicon 2 màu Xanh Trắng</h3>
+                                                <p>280.000₫</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="muboi" data-price="180000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham8.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Giảm giá</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        </div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Mũ bơi silicon trắng bóng đơn giản</h3>
+                                                <p><s style="color: gray; font-weight: normal;">250.000₫</s>
+                                                    180.000₫</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="binhnuoc" data-price="450000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham9.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Mới</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        </div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Bình nước lọc thông minh BluePure</h3>
+                                                <p>450.000₫</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="binhnuoc" data-price="270000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham10.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Mới</div>
+                                            <div class="quick-view">Xem chi tiết</div>
+                                        </div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Bình nước thể thao AquaTwist Xanh Dương</h3>
+                                                <p>270.000₫</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="binhnuoc" data-price="350000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham11.jpg" alt="Sản phẩm">
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        </div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Bình giữ nhiệt inox FitSteel Bạc</h3>
+                                                <p>350.000₫</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="binhnuoc" data-price="400000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham12.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Giảm giá</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        </div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Bình nước cầm tay SportMax Đen</h3>
+                                                <p><s style="color: gray; font-weight: normal;">500.000₫</s>
+                                                    400.000₫</p>
+                                            </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="tuithethao" data-price="600000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham13.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Giảm giá</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        </div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Túi đựng đồ bơi Classic Bag Xanh Trắng</h3>
+                                                <p><s style="color: gray; font-weight: normal;">600.000₫</s>
+                                                    400.000₫</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="tuithethao" data-price="540000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham14.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Mới</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        </div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Ba lô thể thao UrbanFit Xanh Đen</h3>
+                                                <p>540.000₫</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="tuithethao" data-price="450000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham15.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Mới</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        </div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Túi xách thể thao đa năng GymPro Xám Đen</h3>
+                                                <p>450.000₫</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="product-container">
+                                <a href="#">
+                                    <div class="product-card" data-type="tuithethao" data-price="330000">
+                                        <div class="product-img">
+                                            <img src="../../imgs/imgs_SanPham/sanpham16.jpg" alt="Sản phẩm">
+                                            <div class="label-tag">Giảm giá</div>
+                                            <div class="quick-view"><a href="#">Xem chi tiết</a></div>
+                                        </div>
+                                        <a href="#" style="text-decoration: none;">
+                                            <div class="product-info">
+                                                <h3>Túi rút họa tiết LeafBag Xanh Lá</h3>
+                                                <p><s style="color: gray; font-weight: normal;">400.000₫</s>
+                                                    330.000₫</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            </main>
             <!-- Thêm phần đăng ký nhận ưu đãi -->
             <div class="m-5">
                 <section class="newsletter-section" style="background-color: #e53935;">
@@ -667,11 +691,15 @@
                                 <h2 class="mb-3">Đăng ký ngay để được giảm 200k đơn tiếp theo</h2>
 
                                 <div class="input-email mb-3 mx-auto" style="max-width: 500px;">
-                                    <input type="email" class="form-control p" placeholder="Nhập email của bạn ở dưới*" >
+                                    <input id="emailInput" type="email" class="form-control p"
+                                        placeholder="Nhập email của bạn ở dưới*">
                                 </div>
                                 <div class="input-btn mb-3 mx-auto" style="max-width: 500px;">
-                                    <button class="btn_DangKy btn btn-light w-100" type="button" style=" color: #e74c3c;">Đăng ký ngay</button>
+                                    <button class="btn_DangKy btn btn-light w-100" type="button"
+                                        style=" color: #e74c3c;" onclick="validateEmail()">Đăng ký ngay</button>
                                 </div>
+                                <p id="errorMessage" class="text-white text-center" style="display: none;">Vui lòng
+                                    nhập email hợp lệ!</p>
                             </div>
                         </div>
                     </div>
@@ -684,8 +712,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <h5>Mua sắm</h5>
                                 <ul>
-                                    <li><a href="#">Nữ</a></li>
-                                    <li><a href="#">Nam</a></li>
+                                    <li><a href="#">Đồ bơi</a></li>
                                     <li><a href="#">Phụ kiện</a></li>
                                     <li><a href="#">Giảm giá</a></li>
                                 </ul>
@@ -722,77 +749,137 @@
                 </footer>
             </div>
         </div>
-    </div>
 
-    <script>
-        // Hiển thị/ẩn bộ lọc
-        function animationBoLoc(id) {
-            const content = document.getElementById(id);
-            const icon = document.getElementById('icon-' + id);
-            const isOpen = content.classList.toggle('show');
-            icon.textContent = isOpen ? '-' : '+';
-            if (isOpen) {
-                content.style.animation = 'fadeIn 0.3s ease-in-out';
-            } else {
-                content.style.animation = 'none';
+        <script>
+            // Hiển thị/ẩn bộ lọc
+            function animationBoLoc(id) {
+                const content = document.getElementById(id);
+                const icon = document.getElementById('icon-' + id);
+                const isOpen = content.classList.toggle('show');
+                icon.textContent = isOpen ? '-' : '+';
+                if (isOpen) {
+                    content.style.animation = 'fadeIn 0.3s ease-in-out';
+                } else {
+                    content.style.animation = 'none';
+                }
             }
-        }
 
-        // Lọc sản phẩm theo bộ sưu tập
-        function filterByCollection(collection) {
-            const products = document.querySelectorAll('.product-container');
-            // Xử lý chuỗi collection giống như trong code (bỏ dấu, khoảng trắng)
-            const normalizedCollection = collection.toLowerCase()
-                .replace(/\s/g, '')
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "");
+            // Lọc sản phẩm theo bộ sưu tập
+            function filterByCollection(collection) {
+                const products = document.querySelectorAll('.product-container');
+                // Xử lý chuỗi collection giống như trong code (bỏ dấu, khoảng trắng)
+                const normalizedCollection = collection.toLowerCase()
+                    .replace(/\s/g, '')
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "");
 
-            products.forEach(product => {
-                const productCard = product.querySelector('.product-card');
-                if (!productCard) return;
+                products.forEach(product => {
+                    const productCard = product.querySelector('.product-card');
+                    if (!productCard) return;
 
-                const productType = productCard.getAttribute('data-type');
-                if (normalizedCollection === 'tatca' || normalizedCollection === '') {
-                    product.style.display = 'block'; // Hiển thị tất cả sản phẩm
-                } else if (productType === normalizedCollection) {
-                    product.style.display = 'block'; // Hiển thị sản phẩm phù hợp
+                    const productType = productCard.getAttribute('data-type');
+                    if (normalizedCollection === 'tatca' || normalizedCollection === '') {
+                        product.style.display = 'block'; // Hiển thị tất cả sản phẩm
+                    } else if (productType === normalizedCollection) {
+                        product.style.display = 'block'; // Hiển thị sản phẩm phù hợp
+                    } else {
+                        product.style.display = 'none'; // Ẩn sản phẩm không phù hợp
+                    }
+                });
+            }
+
+            // Hàm định dạng số tiền
+            function formatPrice(price) {
+                return new Intl.NumberFormat('vi-VN').format(price) + ' ₫';
+            }
+
+            // Hàm chuyển đổi từ chuỗi tiền tệ về số
+            function parsePrice(priceStr) {
+                const numStr = priceStr.replace(/[^\d]/g, '');
+                return parseInt(numStr, 10) || 0;
+            }
+
+            // Xử lý sự kiện khi kéo thanh trượt
+            document.getElementById('priceSlider').addEventListener('input', function () {
+                const price = parseInt(this.value);
+                document.getElementById('priceInput').value = formatPrice(price);
+                filterByPrice(price);
+            });
+
+            // Xử lý sự kiện khi nhập giá
+            document.getElementById('priceInput').addEventListener('change', function () {
+                const enteredPrice = parsePrice(this.value);
+                const minPrice = parseInt(document.getElementById('priceSlider').min);
+                const maxPrice = parseInt(document.getElementById('priceSlider').max);
+
+                // Giới hạn giá trị nhập vào trong khoảng min-max
+                let adjustedPrice = enteredPrice;
+                if (enteredPrice < minPrice) adjustedPrice = minPrice;
+                if (enteredPrice > maxPrice) adjustedPrice = maxPrice;
+
+                // Cập nhật giá trị
+                document.getElementById('priceSlider').value = adjustedPrice;
+                this.value = formatPrice(adjustedPrice);
+                filterByPrice(adjustedPrice);
+            });
+
+             // Xử lý sự kiện khi nhập để chỉ cho phép số
+             document.getElementById('priceInput').addEventListener('input', function (e) {
+                // Loại bỏ các ký tự không phải số
+                const sanitizedValue = this.value.replace(/[^\d]/g, '');
+                this.value = sanitizedValue;
+            });
+
+            // Khởi tạo giá trị ban đầu
+            const initialPrice = 700000;
+            document.getElementById('priceSlider').value = initialPrice;
+            document.getElementById('priceInput').value = formatPrice(initialPrice);
+
+            // Lọc sản phẩm theo giá
+            function filterByPrice(maxPrice) {
+                const products = document.querySelectorAll('.product-container');
+                products.forEach(product => {
+                    const productCard = product.querySelector('.product-card');
+                    if (!productCard) return;
+
+                    const productPrice = parseInt(productCard.getAttribute('data-price'), 10);
+                    if (productPrice <= maxPrice) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+
+            // Gắn sự kiện cho các liên kết trong "Bộ sưu tập"
+            document.querySelectorAll('#collection a').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+                    const collection = this.textContent.trim(); // Lấy tiêu chí từ nội dung liên kết
+                    filterByCollection(collection); // Gọi hàm lọc theo bộ sưu tập
+                });
+            });
+
+            // Gắn sự kiện cho thanh trượt giá
+            document.querySelector('.price-slider').addEventListener('input', function () {
+                const maxPrice = parseInt(this.value, 10); // Lấy giá trị tối đa từ thanh trượt
+                filterByPrice(maxPrice); // Gọi hàm lọc theo giá
+            });
+
+            // Gắn sự kiện iểm tra Email cho nút "Đăng ký ngay"
+            function validateEmail() {
+                const emailInput = document.getElementById('emailInput');
+                const errorMessage = document.getElementById('errorMessage');
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailPattern.test(emailInput.value)) {
+                    errorMessage.style.display = 'block'; // Hiển thị thông báo lỗi
                 } else {
-                    product.style.display = 'none'; // Ẩn sản phẩm không phù hợp
+                    errorMessage.style.display = 'none'; // Ẩn thông báo lỗi
+                    alert('Đăng ký thành công!'); // Thông báo thành công
                 }
-            });
-        }
-
-        // Lọc sản phẩm theo giá
-        function filterByPrice(maxPrice) {
-            const products = document.querySelectorAll('.product-container');
-            products.forEach(product => {
-                const productCard = product.querySelector('.product-card');
-                if (!productCard) return; // Bỏ qua nếu không tìm thấy thẻ .product-card
-
-                const productPrice = parseInt(productCard.getAttribute('data-price'), 10);
-                if (productPrice <= maxPrice) {
-                    product.style.display = 'block'; // Hiển thị sản phẩm
-                } else {
-                    product.style.display = 'none'; // Ẩn sản phẩm
-                }
-            });
-        }
-
-        // Gắn sự kiện cho các liên kết trong "Bộ sưu tập"
-        document.querySelectorAll('#collection a').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
-                const collection = this.textContent.trim(); // Lấy tiêu chí từ nội dung liên kết
-                filterByCollection(collection); // Gọi hàm lọc theo bộ sưu tập
-            });
-        });
-
-        // Gắn sự kiện cho thanh trượt giá
-        document.querySelector('.price-slider').addEventListener('input', function () {
-            const maxPrice = parseInt(this.value, 10); // Lấy giá trị tối đa từ thanh trượt
-            filterByPrice(maxPrice); // Gọi hàm lọc theo giá
-        });
-    </script>
+            }
+        </script>
 
 </body>
 
