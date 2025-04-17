@@ -8,26 +8,12 @@
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/template.css">
     <script src="../js/bootstrap.bundle.min.js"></script>
-
-    <style>
-        .active {
-            color: #e74c3c !important;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #e74c3c !important;
-            transition: all 0.5s ease;
-        }
-
-        footer input::placeholder {
-            color: white !important;
-        }
-    </style>
 </head>
 
 <body style="background-color: #183c5c;">
-    <div class="container-fluid" style="height: 200vh;">
+    <div class="container-fluid">
         <!-- Header -->
         <header class="mb-xl-5">
             <nav class="navbar navbar-expand-xl navbar-dark fixed-top px-xl-5" style="background-color: #183c5c;">
@@ -75,17 +61,15 @@
         </header>
 
         <!-- Body -->
-
-        <body class="pt-5">
-        </body>
+        <div class="pt-5"></div>
 
         <!-- Footer -->
         <footer>
             <div class="row py-5 mx-auto text-light" style="background-color: #e74c3c;">
                 <div class="col-4 mx-auto">
                     <h4 class=" fw-normal text-nowrap">Đăng ký ngay để được giảm 200k đơn tiếp theo</h4>
-                    <form action="">
-                        <input class="form-control mt-3 text-light ps-3" type="text" name="" id=""
+                    <form>
+                        <input class="form-control mt-3 text-light ps-3" type="text" name="Email" id="Email"
                             style="border-radius: 0; border: 4px solid #e08898; background-color: #e74c3c;"
                             placeholder="Nhập email của bạn ở đây">
                         <button class="btn w-100 btn-light mt-3" type="submit"
