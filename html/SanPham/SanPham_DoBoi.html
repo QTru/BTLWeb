@@ -14,17 +14,17 @@
             font-family: 'Roboto', sans-serif;
             background-color: #173d58;
         }
-
+        
         h3 {
             font-size: 24px;
             margin-bottom: 20px;
         }
-
+        
         .filter-group {
             border-top: 1px solid #ffffff30;
             padding: 15px 0;
         }
-
+        
         .filter-header {
             display: flex;
             justify-content: space-between;
@@ -32,7 +32,7 @@
             font-size: 17px;
             cursor: pointer;
         }
-
+        
         .filter-content {
             margin-top: 10px;
             display: none;
@@ -40,38 +40,37 @@
             color: #fff;
             animation: fadeIn 0.3s ease-in-out;
         }
-
+        
         .filter-content.show {
             display: block;
         }
-
+        
         .filter-content div {
             margin: 6px 0;
             cursor: pointer;
         }
-
+        
         .price-slider {
             width: 100%;
         }
-
+        
         .range-labels {
             display: flex;
             justify-content: space-between;
             font-size: 14px;
             margin-top: 5px;
         }
-
+        
         #category a {
             color: white;
-
         }
-
+        
         #category a:hover {
             color: #e74c3c;
             font-size: 20px;
             transition: all 0.3s ease;
         }
-
+        
         input[type=range] {
             width: 100%;
             appearance: none;
@@ -80,7 +79,7 @@
             border-radius: 3px;
             outline: none;
         }
-
+        
         input[type=range]::-webkit-slider-thumb {
             appearance: none;
             width: 15px;
@@ -90,35 +89,34 @@
             border-radius: 50%;
             cursor: pointer;
         }
-
+        
         .icon-toggle {
             font-size: 14px;
             margin-left: 10px;
             transition: transform 0.2s ease;
         }
-
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(-5px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
+        
         nav ul li a:hover {
             color: #e74c3c;
             transition: all 0.3s ease;
         }
-
+        
         .price-input-container {
             position: relative;
             margin-bottom: 15px;
         }
-
+        
         .price-input {
             width: 100%;
             padding: 8px 30px 8px 10px;
@@ -127,7 +125,7 @@
             border-radius: 4px;
             text-align: left;
         }
-
+        
         .currency-symbol {
             position: absolute;
             right: 10px;
@@ -135,33 +133,33 @@
             transform: translateY(-50%);
             font-weight: bold;
         }
-
         /* Thêm style cho input khi focus */
+        
         .price-input:focus {
             outline: none;
             border-color: #e74c3c;
             box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
         }
-
         /*sản phẩm*/
+        
         .products-row {
             flex-wrap: wrap;
             gap: 20px;
             margin: 0;
             align-items: stretch;
         }
-
+        
         .product-container {
             flex: 0 0 calc(25% - 20px);
             max-width: calc(25% - 20px);
             box-sizing: border-box;
             margin: 0;
         }
-
+        
         .product-container[style*="display: none"] {
             display: none !important;
         }
-
+        
         .product-card {
             width: 100%;
             background-color: #fff;
@@ -172,27 +170,26 @@
             font-family: "Segoe UI", sans-serif;
             transition: transform 0.3s;
         }
-
+        
         .product-container[style*="display: none"] {
             display: none !important;
         }
-
+        
         .product-card:hover {
             transform: translateY(-5px);
         }
-
-
+        
         .product-img {
             position: relative;
             background-color: #f9f9f9;
         }
-
+        
         .product-img img {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
-
+        
         .label-tag {
             position: absolute;
             top: 10px;
@@ -203,7 +200,7 @@
             padding: 2px 8px;
             border-radius: 4px;
         }
-
+        
         .quick-view {
             position: absolute;
             bottom: 0;
@@ -217,36 +214,36 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-
+        
         .quick-view a {
             text-decoration: none;
             color: #333;
         }
-
+        
         .product-info {
             padding: 12px;
             text-align: center;
             background-color: #e2e2e2;
         }
-
+        
         .product-info h3 {
             font-size: 16px;
             color: #1a355c;
             margin: 0 0 6px;
         }
-
+        
         .product-info p {
             font-size: 14px;
             color: #000;
             font-weight: bold;
             margin: 0;
         }
-
+        
         .product-card:hover .quick-view {
             opacity: 1;
         }
-
         /* Footer */
+        
         #errorMessage {
             font-size: 14px;
             padding: 5px;
@@ -254,7 +251,7 @@
             border-radius: 4px;
             transition: all 0.3s ease;
         }
-
+        
         #emailInput.invalid {
             border-color: #ff0000 !important;
             box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
@@ -263,15 +260,12 @@
 </head>
 
 <body>
-    <div class="wrapper d-flex flex-column min-vh-100 container-fluid"
-        style="background-color: #173d58; margin-top: -10px;">
+    <div class="wrapper d-flex flex-column min-vh-100 container-fluid" style="background-color: #173d58; margin-top: -10px;">
         <header class="mb-xl-5">
             <nav class="navbar navbar-expand-xl navbar-dark fixed-top px-xl-5" style="background-color: #183c5c;">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="../html/TrangChu.html">Sporty</a>
-                    <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavId">
@@ -281,8 +275,7 @@
                                     chủ</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle active" href="#" id="dropdownSP"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle active" href="#" id="dropdownSP" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Sản phẩm
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownSP">
@@ -301,8 +294,8 @@
                                 <a class="nav-link" href="../html/LienHe.html" aria-current="page">Liên hệ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../html/DangNhap.html"> <i class="fas fa-user me-1"></i> Đăng
-                                    nhập</a>
+                                <a class="nav-link" href="../html/DangNhap.html"> <i class="fas fa-user me-1"></i> Đăng nhập
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../../html/GioHang.html"> <i class="fas fa-shopping-cart me-1"></i> Giỏ hàng</a>
@@ -347,8 +340,7 @@
                                     <input type="text" id="priceInput" class="price-input" value="1.500.000 ₫">
                                     <span class="currency-symbol">₫</span>
                                 </div>
-                                <input type="range" min="200000" max="1000000" step="50000" value="1000000"
-                                    class="price-slider" id="priceSlider">
+                                <input type="range" min="200000" max="1000000" step="50000" value="1000000" class="price-slider" id="priceSlider">
                                 <div class="range-labels">
                                     <span>200.000 ₫</span>
                                     <span>1.000.000 ₫</span>
@@ -365,8 +357,7 @@
                                 <a href="#">
                                     <div class="product-card" data-type="doboinam" data-price="450000">
                                         <div class="product-img">
-                                            <img src="../../imgs/imgs_SanPham/doboinam1.jpg"
-                                                alt="Quần bơi nam Sporty Pro Đen">
+                                            <img src="../../imgs/imgs_SanPham/doboinam1.jpg" alt="Quần bơi nam Sporty Pro Đen">
                                             <div class="quick-view"><a href="#">Xem chi tiết</a></div>
                                         </div>
                                         <a href="#" style="text-decoration: none;">
@@ -390,27 +381,21 @@
                 <div class="col-4 mx-auto">
                     <h4 class=" fw-normal text-nowrap">Đăng ký ngay để được giảm 200k đơn tiếp theo</h4>
                     <form id="registerForm">
-                        <input class="form-control mt-3 text-light ps-3" type="email" name="Email" id="emailInput"
-                            style="border-radius: 0; border: 4px solid #e08898; background-color: #e74c3c;"
-                            placeholder="Nhập email của bạn ở đây">
+                        <input class="form-control mt-3 text-light ps-3" type="email" name="Email" id="emailInput" style="border-radius: 0; border: 4px solid #e08898; background-color: #e74c3c;" placeholder="Nhập email của bạn ở đây">
                         <!-- Thêm thông báo lỗi -->
                         <div id="errorMessage" style="color: white; display: none; margin-top: 5px;">
                             Vui lòng nhập địa chỉ email hợp lệ!
                         </div>
-                        <button class="btn w-100 btn-light mt-3" type="submit"
-                            style="border-radius: 0 12px 0 0; color: #e74c3c;">Đăng ký ngay</button>
+                        <button class="btn w-100 btn-light mt-3" type="submit" style="border-radius: 0 12px 0 0; color: #e74c3c;">Đăng ký ngay</button>
                     </form>
                 </div>
             </div>
             <div class="row py-5 mx-auto px-xl-5 text-nowrap" style="background-color: #101c2c;">
                 <div class="col-2 mx-auto">
                     <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Mua sắm</h4>
-                    <a class="link-secondary d-block text-decoration-none"
-                        href="../../html/SanPham/SanPham_DoBoi.html">Đồ bơi</a>
-                    <a class="link-secondary d-block text-decoration-none"
-                        href="../../html/SanPham/SanPham_PhuKienBoi.html">Phụ kiện</a>
-                    <a class="link-secondary d-block text-decoration-none"
-                        href="../../html/SanPham/SanPham_GiamGia.html">Giảm giá</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/SanPham/SanPham_DoBoi.html">Đồ bơi</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/SanPham/SanPham_PhuKienBoi.html">Phụ kiện</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/SanPham/SanPham_GiamGia.html">Giảm giá</a>
                 </div>
                 <div class="col-2 mx-auto">
                     <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Thông tin</h4>
@@ -482,14 +467,14 @@
 
         // Gắn sự kiện cho các liên kết trong "Danh mục"
         document.querySelectorAll('#category a').forEach(link => {
-            link.addEventListener('click', function (e) {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const category = this.textContent.trim();
 
                 // Xử lý trường hợp "Tất cả"
                 const filterValue = category === 'Tất cả' ? 'tatca' :
                     category === 'Đồ bơi nam' ? 'doboinam' :
-                        category === 'Đồ bơi nữ' ? 'doiboinu' : '';
+                    category === 'Đồ bơi nữ' ? 'doiboinu' : '';
 
                 filterByCategory(filterValue);
             });
@@ -507,14 +492,14 @@
         }
 
         // Xử lý sự kiện khi kéo thanh trượt
-        document.getElementById('priceSlider').addEventListener('input', function () {
+        document.getElementById('priceSlider').addEventListener('input', function() {
             const price = parseInt(this.value);
             document.getElementById('priceInput').value = formatPrice(price);
             filterByPrice(price);
         });
 
         // Xử lý sự kiện khi nhập giá
-        document.getElementById('priceInput').addEventListener('change', function () {
+        document.getElementById('priceInput').addEventListener('change', function() {
             const enteredPrice = parsePrice(this.value);
             const minPrice = parseInt(document.getElementById('priceSlider').min);
             const maxPrice = parseInt(document.getElementById('priceSlider').max);
@@ -531,7 +516,7 @@
         });
 
         // Xử lý sự kiện khi nhập để chỉ cho phép số
-        document.getElementById('priceInput').addEventListener('input', function (e) {
+        document.getElementById('priceInput').addEventListener('input', function(e) {
             // Loại bỏ các ký tự không phải số
             const sanitizedValue = this.value.replace(/[^\d]/g, '');
             this.value = sanitizedValue;
@@ -559,13 +544,13 @@
         }
 
         // Gắn sự kiện cho thanh trượt giá
-        document.querySelector('.price-slider').addEventListener('input', function () {
+        document.querySelector('.price-slider').addEventListener('input', function() {
             const maxPrice = parseInt(this.value, 10); // Lấy giá trị tối đa từ thanh trượt
             filterByPrice(maxPrice); // Gọi hàm lọc theo giá
         });
 
         // Gắn sự kiện kiểm tra email cho form đăng ký
-        document.getElementById('registerForm').addEventListener('submit', function (e) {
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
             e.preventDefault(); // Ngăn form submit mặc định
 
             const emailInput = document.getElementById('emailInput');
@@ -590,7 +575,7 @@
         });
 
         // Thêm sự kiện khi người dùng nhập để ẩn thông báo lỗi
-        document.getElementById('emailInput').addEventListener('input', function () {
+        document.getElementById('emailInput').addEventListener('input', function() {
             document.getElementById('errorMessage').style.display = 'none';
             this.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
         });
