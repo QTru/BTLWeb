@@ -104,7 +104,13 @@
             "originalPrice": 250000,
             "image": "../../imgs/imgs_SanPham/sanpham4.jpg",
             "discount": true,
-            "new": false
+            "new": false,
+            "description": "Kính bơi SpeedEdge là lựa chọn hoàn hảo cho các vận động viên bơi lội. Sản phẩm được thiết kế để tối ưu hóa hiệu suất, với lớp kính chống sương mù và chống tia UV, mang lại tầm nhìn rõ ràng. Dây đeo mềm mại, dễ điều chỉnh đảm bảo sự thoải mái và chắc chắn khi sử dụng. Phù hợp cho thi đấu hoặc luyện tập, kính bơi này mang đến sự tự tin và phong cách.",
+            "info": {
+                "material": "Polycarbonate và Silicone",
+                "features": "Chống sương mù, chống tia UV, dây đeo bền",
+                "usage": "Bơi thi đấu, luyện tập chuyên sâu"
+            }
         },
         {
             "id": 8,
