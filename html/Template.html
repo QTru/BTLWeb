@@ -11,38 +11,7 @@
     <link rel="stylesheet" href="../css/template.css">
     <script src="../js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // Gắn sự kiện kiểm tra email cho form đăng ký
-        document.getElementById('registerForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Ngăn form submit mặc định
 
-            const emailInput = document.getElementById('emailInput');
-            const errorMessage = document.getElementById('errorMessage');
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (!emailPattern.test(emailInput.value)) {
-                // Email không hợp lệ
-                errorMessage.style.display = 'block';
-                emailInput.style.borderColor = '#ff0000'; // Đổi màu border sang đỏ
-            } else {
-                // Email hợp lệ
-                errorMessage.style.display = 'none';
-                emailInput.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
-
-                // Hiển thị thông báo thành công
-                alert('Đăng ký thành công! Cảm ơn bạn đã đăng ký nhận ưu đãi.');
-
-                // Reset form
-                this.reset();
-            }
-        });
-
-        // Thêm sự kiện khi người dùng nhập để ẩn thông báo lỗi
-        document.getElementById('emailInput').addEventListener('input', function () {
-            document.getElementById('errorMessage').style.display = 'none';
-            this.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
-        });
-    </script>
 </head>
 
 <body style="background-color: #183c5c;">
@@ -138,7 +107,7 @@
                     <a class="link-secondary d-block text-decoration-none" href="../html/ChinhSach.html">Chính sách
                         cửa
                         hàng </a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/ThanhToan.html">Phương thức
+                    <a class="link-secondary d-block text-decoration-none" href="../html/ChinhSach.html">Phương thức
                         thanh toán</a>
                 </div>
                 <div class="col-2 mx-auto">
@@ -159,6 +128,39 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        // Gắn sự kiện kiểm tra email cho form đăng ký
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Ngăn form submit mặc định
+
+            const emailInput = document.getElementById('emailInput');
+            const errorMessage = document.getElementById('errorMessage');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                // Email không hợp lệ
+                errorMessage.style.display = 'block';
+                emailInput.style.borderColor = '#ff0000'; // Đổi màu border sang đỏ
+            } else {
+                // Email hợp lệ
+                errorMessage.style.display = 'none';
+                emailInput.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
+
+                // Hiển thị thông báo thành công
+                alert('Đăng ký thành công! Cảm ơn bạn đã đăng ký nhận ưu đãi.');
+
+                // Reset form
+                this.reset();
+            }
+        });
+
+        // Thêm sự kiện khi người dùng nhập để ẩn thông báo lỗi
+        document.getElementById('emailInput').addEventListener('input', function () {
+            document.getElementById('errorMessage').style.display = 'none';
+            this.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
+        });
+    </script>
 </body>
 
 </html>

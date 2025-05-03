@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản phẩm</title>
+    <title>Phụ kiện bơi</title>
 
-    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../css/all.min.css">
-    <link rel="stylesheet" href="../../../../css/template.css">
-    <script src="../../../../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/template.css">
+    <script src="../../js/bootstrap.bundle.min.js"></script>
     <style>
         .quantity-input {
             width: 150px;
@@ -319,7 +319,7 @@
                     <a class="link-secondary d-block text-decoration-none" href="../../html/ChinhSach.html">Chính sách
                         cửa
                         hàng </a>
-                    <a class="link-secondary d-block text-decoration-none" href="../../html/ThanhToan.html">Phương thức
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/ChinhSach.html">Phương thức
                         thanh toán</a>
                 </div>
                 <div class="col-2 mx-auto">
@@ -567,6 +567,37 @@
 
             // Thêm sự kiện cho nút "THÊM VÀO GIỎ HÀNG"
             document.querySelector('.btn-danger.w-75')?.addEventListener('click', addToCartFromPage);
+        });
+
+        // Gắn sự kiện kiểm tra email cho form đăng ký
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Ngăn form submit mặc định
+
+            const emailInput = document.getElementById('emailInput');
+            const errorMessage = document.getElementById('errorMessage');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                // Email không hợp lệ
+                errorMessage.style.display = 'block';
+                emailInput.style.borderColor = '#ff0000'; // Đổi màu border sang đỏ
+            } else {
+                // Email hợp lệ
+                errorMessage.style.display = 'none';
+                emailInput.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
+
+                // Hiển thị thông báo thành công
+                alert('Đăng ký thành công! Cảm ơn bạn đã đăng ký nhận ưu đãi.');
+
+                // Reset form
+                this.reset();
+            }
+        });
+
+        // Thêm sự kiện khi người dùng nhập để ẩn thông báo lỗi
+        document.getElementById('emailInput').addEventListener('input', function () {
+            document.getElementById('errorMessage').style.display = 'none';
+            this.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
         });
     </script>
 </body>
