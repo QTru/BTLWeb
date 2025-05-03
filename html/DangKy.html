@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function checkTen() {
+            let ten = document.getElementById("ten").value;
+            let tbTen = document.getElementById("tbTen");
+            let regex = /^[A-Z][a-z]*( [A-Z][a-z]*)+$/;
+
+            if (regex.test(ten)) {
+                tbTen.innerHTML = "";
+                return true;
+            } else {
+                tbTen.innerHTML = "Tên cần có 2 chữ, mỗi chữ cái đầu viết hoa và được cách bởi dấu cách";
+                return false
+            }
+        }
+
+        function checkPass() {
+            let pass = document.getElementById("pass").value;
+            let tbPass = document.getElementById("tbPass");
+            let regexText = /[a-zA-Z]+/;
+            let regexNum = /[0-9]+/;
+            let regexLength = /^.{6,}$/;
+
+            if (regexText.test(pass) && regexNum.test(pass) && regexLength.test(pass)) {
+                tbPass.innerHTML = "";
+                return true;
+
+            } else {
+                tbPass.innerHTML = "Mật khẩu cần có ít nhất 6 ký tự, bao gồm chữ cái và số";
+                return false;
+            }
+        }
+
+        function checkRepass() {
+            let pass = document.getElementById("pass").value;
+            let repass = document.getElementById("repass").value;
+            let tbRepass = document.getElementById("tbRepass");
+
+            if (repass == pass) {
+                tbRepass.innerHTML = "";
+                return true;
+            } else {
+                tbRepass.innerHTML = "Mật khẩu không khớp";
+                return false;
+            }
+        }
+
+        function checkEmail() {
+            let email = document.getElementById("emailForm").value;
+            let tbEmail = document.getElementById("tbEmail");
+            let regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)+$/;
+
+            if (regex.test(email)) {
+                tbEmail.innerHTML = "";
+                return true;
+            } else {
+                tbEmail.innerHTML = "Email cần có định dạng: example@gmail.com";
+                return false;
+            }
+        }
+
+        function checkSdt() {
+            let sdt = document.getElementById("sdt").value;
+            let tbSdt = document.getElementById("tbSdt");
+            let regex = /^0[0-9]{3}(-[0-9]{3}){2}$/;
+
+            if (regex.test(sdt)) {
+                tbSdt.innerHTML = "";
+                return true;
+            } else {
+                tbSdt.innerHTML = "Số điện thoại cần có định dạng: 0xxx-xxx-xxx";
+                return false;
+            }
+        }
+
+        function checkAddress() {
+            let address = document.getElementById("address").value;
+            let tbAddress = document.getElementById("tbAddress");
+
+            if (address.length > 0) {
+                tbAddress.innerHTML = "";
+                return true;
+            } else {
+                tbAddress.innerHTML = "Địa chỉ không được để trống";
+                return false;
+            }
+        }
+
+        function createAcc() {
+            if (!(checkTen() && checkPass() && checkRepass() && checkEmail() && checkSdt() && checkAddress()))
+                alert("Vui lòng kiểm tra lại thông tin");
+            else if (!document.getElementById("check").checked)
+                alert("Vui lòng đồng ý với chính sách cửa hàng");
+            else {
+                alert("Tạo tài khoản thành công");
+                window.location.href = "../html/TrangChu.html";
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: #183c5c;">
+    <div class="container-fluid">
+        <!-- Header -->
+        <header class="mb-xl-5">
+            <nav class="navbar navbar-expand-xl navbar-dark fixed-top px-xl-5" style="background-color: #183c55;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../html/TrangChu.html">Sporty</a>
+                    <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/TrangChu.html" aria-current="page">Trang
+                                    chủ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownSP" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Sản phẩm
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownSP">
+                                    <li><a class="dropdown-item" href="../html/SanPham/SanPham_DoBoi.html">Đồ bơi</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../html/SanPham/SanPham_PhuKienBoi.html">Phụ kiện
+                                            bơi</a></li>
+                                    <li><a class="dropdown-item" href="../html/SanPham/SanPham_GiamGia.html">Hàng giảm
+                                            giá</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/GioiThieu.html" aria-current="page">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/LienHe.html" aria-current="page">Liên hệ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/DangKy.html"> <i class="fas fa-user me-1"></i> Đăng
+                                    ký</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../html/GioHang.html"> <i
+                                        class="fas fa-shopping-cart me-1"></i> Giỏ
+                                    hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Body -->
+        <div class="pt-5">
+            <div class="col-4 mx-auto">
+                <form class="w-100 text-light">
+                    <label for="ten" class="form-label">Nhập tên tài khoản:</label>
+                    <input type="text" name="ten" id="ten" class="form-control" placeholder="Nhập tên tài khoản"
+                        onblur="checkTen()">
+                    <span class="text-danger d-block" id="tbTen">(*)</span>
+                    <label for="pass" class="form-label mt-2">Nhập mật khẩu:</label>
+                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Nhập mật khẩu"
+                        onblur="checkPass()">
+                    <span class="text-danger d-block" id="tbPass">(*)</span>
+                    <label for="repass" class="form-label mt-2">Nhập lại mật khẩu:</label>
+                    <input type="password" name="repass" id="repass" class="form-control"
+                        placeholder="Nhập lại mật khẩu" onblur="checkRepass()">
+                    <span class="text-danger d-block" id="tbRepass">(*)</span>
+                    <label for="emailForm" class="form-label mt-2">Nhập email:</label>
+                    <input type="email" name="emailForm" id="emailForm" class="form-control" placeholder="Nhập email"
+                        onblur="checkEmail()">
+                    <span class="text-danger d-block" id="tbEmail">(*)</span>
+                    <label for="sdt" class="form-label mt-2">Nhập số điện thoại:</label>
+                    <input type="tel" name="sdt" id="sdt" class="form-control" placeholder="Nhập số điện thoại"
+                        onblur="checkSdt()">
+                    <span class="text-danger d-block" id="tbSdt">(*)</span>
+                    <label for="address" class="form-label mt-2">Nhập địa chỉ:</label>
+                    <input type="text" name="address" id="address" class="form-control" placeholder="Nhập địa chỉ"
+                        onblur="checkAddress()">
+                    <span class="text-danger d-block" id="tbAddress">(*)</span>
+                    <div class="form-check mt-2">
+                        <input type="checkbox" class="form-check-input" id="check" name="check" value="1">
+                        <label for="" class="form-check-label">Chấp hành <a href="../html/ChinhSach.html"
+                                style="color: #e74c3c;">Chính sách cửa hàng</a></label>
+                    </div>
+                </form>
+                <div class="w-100 text-end">
+                    <button class="btn btn-light mt-2 px-5" type="submit"
+                        style="color: #e74c3c; border-radius: 0 12px 0 0;" onclick="createAcc()">Tạo tài
+                        khoản</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thêm phần đăng ký nhận ưu đãi -->
+        <footer>
+            <div class="row py-5 mx-auto text-light mt-5" style="background-color: #e74c3c;">
+                <div class="col-4 mx-auto">
+                    <h4 class=" fw-normal text-nowrap">Đăng ký ngay để được giảm 200k đơn tiếp theo</h4>
+                    <form id="registerForm">
+                        <input class="form-control mt-3 text-light ps-3" type="email" name="Email" id="emailInput"
+                            style="border-radius: 0; border: 4px solid #e08898; background-color: #e74c3c;"
+                            placeholder="Nhập email của bạn ở đây">
+                        <!-- Thêm thông báo lỗi -->
+                        <div id="errorMessage" style="color: white; display: none; margin-top: 5px;">
+                            Vui lòng nhập địa chỉ email hợp lệ!
+                        </div>
+                        <button class="btn w-100 btn-light mt-3" type="submit"
+                            style="border-radius: 0 12px 0 0; color: #e74c3c;">Đăng ký ngay</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row py-5 mx-auto px-xl-5 text-nowrap" style="background-color: #101c2c;">
+                <div class="col-2 mx-auto">
+                    <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Mua sắm</h4>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham/SanPham_DoBoi.html">Đồ
+                        bơi</a>
+                    <a class="link-secondary d-block text-decoration-none"
+                        href="../html/SanPham/SanPham_PhuKienBoi.html">Phụ kiện</a>
+                    <a class="link-secondary d-block text-decoration-none"
+                        href="../html/SanPham/SanPham_GiamGia.html">Giảm giá</a>
+                </div>
+                <div class="col-2 mx-auto">
+                    <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Thông tin</h4>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/HoiDap.html">Hỏi đáp</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/GiaoTra.html">Giao hàng &
+                        Trả
+                        hàng</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/ChinhSach.html">Chính sách
+                        cửa
+                        hàng </a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/ChinhSach.html">Phương thức
+                        thanh toán</a>
+                </div>
+                <div class="col-2 mx-auto">
+                    <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Khám phá</h4>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/GioiThieu.html">Giới
+                        thiệu</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/LienHe.html">Liên hệ</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/LienHe.html">Đại lý</a>
+                </div>
+                <div class="col-2 mx-auto">
+                    <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Dịch vụ khách hàng</h4>
+                    <a class="link-secondary d-block text-decoration-none" href="tel:0999-123-456">Điện thoại: 0999
+                        123
+                        456</a>
+                    <a class="link-secondary d-block text-decoration-none" href="mailto:buiquoctru@gmail.com">Email:
+                        buiquoctru@gmail.com</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Gắn sự kiện kiểm tra email cho form đăng ký
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Ngăn form submit mặc định
+
+            const emailInput = document.getElementById('emailInput');
+            const errorMessage = document.getElementById('errorMessage');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                // Email không hợp lệ
+                errorMessage.style.display = 'block';
+                emailInput.style.borderColor = '#ff0000'; // Đổi màu border sang đỏ
+            } else {
+                // Email hợp lệ
+                errorMessage.style.display = 'none';
+                emailInput.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
+
+                // Hiển thị thông báo thành công
+                alert('Đăng ký thành công! Cảm ơn bạn đã đăng ký nhận ưu đãi.');
+
+                // Reset form
+                this.reset();
+            }
+        });
+
+        // Thêm sự kiện khi người dùng nhập để ẩn thông báo lỗi
+        document.getElementById('emailInput').addEventListener('input', function () {
+            document.getElementById('errorMessage').style.display = 'none';
+            this.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
+        });
+    </script>
+</body>
+
+</html>

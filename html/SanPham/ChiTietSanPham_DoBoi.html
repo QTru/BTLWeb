@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản phẩm</title>
+    <title>Đồ bơi</title>
 
-    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../css/all.min.css">
-    <link rel="stylesheet" href="../../../../css/template.css">
-    <script src="../../../../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/template.css">
+    <script src="../../js/bootstrap.bundle.min.js"></script>
     <style>
         .quantity-input {
             width: 150px;
@@ -143,7 +143,7 @@
         <header class="mb-xl-5">
             <nav class="navbar navbar-expand-xl navbar-dark fixed-top px-xl-5" style="background-color: #183c5c;">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="../html/TrangChu.html">Sporty</a>
+                    <a class="navbar-brand" href="../../html/TrangChu.html">Sporty</a>
                     <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -152,7 +152,7 @@
                     <div class="collapse navbar-collapse" id="collapsibleNavId">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="../html/TrangChu.html" aria-current="page">Trang
+                                <a class="nav-link" href="../../html/TrangChu.html" aria-current="page">Trang
                                     chủ</a>
                             </li>
                             <li class="nav-item dropdown">
@@ -171,14 +171,14 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../html/GioiThieu.html" aria-current="page">Giới thiệu</a>
+                                <a class="nav-link" href="../../html/GioiThieu.html" aria-current="page">Giới thiệu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../html/LienHe.html" aria-current="page">Liên hệ</a>
+                                <a class="nav-link" href="../../html/LienHe.html" aria-current="page">Liên hệ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../html/DangNhap.html"> <i class="fas fa-user me-1"></i> Đăng
-                                    nhập</a>
+                                <a class="nav-link" href="../../html/DangKy.html"> <i class="fas fa-user me-1"></i> Đăng
+                                    ký</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../../html/GioHang.html"> <i
@@ -228,22 +228,22 @@
                 </div>
                 <div class="col-2 mx-auto">
                     <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Thông tin</h4>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/HoiDap.html">Hỏi đáp</a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/GiaoTra.html">Giao hàng &
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/HoiDap.html">Hỏi đáp</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/GiaoTra.html">Giao hàng &
                         Trả
                         hàng</a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/ChinhSach.html">Chính sách
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/ChinhSach.html">Chính sách
                         cửa
                         hàng </a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/ThanhToan.html">Phương thức
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/ChinhSach.html">Phương thức
                         thanh toán</a>
                 </div>
                 <div class="col-2 mx-auto">
                     <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Khám phá</h4>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/GioiThieu.html">Giới
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/GioiThieu.html">Giới
                         thiệu</a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/LienHe.html">Liên hệ</a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/LienHe.html">Đại lý</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/LienHe.html">Liên hệ</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../../html/LienHe.html">Đại lý</a>
                 </div>
                 <div class="col-2 mx-auto">
                     <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Dịch vụ khách hàng</h4>
@@ -466,6 +466,37 @@
 
             // Thêm sự kiện cho nút "THÊM VÀO GIỎ HÀNG"
             document.querySelector('.btn-danger.w-75')?.addEventListener('click', addToCartFromPage);
+        });
+
+        // Gắn sự kiện kiểm tra email cho form đăng ký
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Ngăn form submit mặc định
+
+            const emailInput = document.getElementById('emailInput');
+            const errorMessage = document.getElementById('errorMessage');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                // Email không hợp lệ
+                errorMessage.style.display = 'block';
+                emailInput.style.borderColor = '#ff0000'; // Đổi màu border sang đỏ
+            } else {
+                // Email hợp lệ
+                errorMessage.style.display = 'none';
+                emailInput.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
+
+                // Hiển thị thông báo thành công
+                alert('Đăng ký thành công! Cảm ơn bạn đã đăng ký nhận ưu đãi.');
+
+                // Reset form
+                this.reset();
+            }
+        });
+
+        // Thêm sự kiện khi người dùng nhập để ẩn thông báo lỗi
+        document.getElementById('emailInput').addEventListener('input', function () {
+            document.getElementById('errorMessage').style.display = 'none';
+            this.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
         });
     </script>
 </body>

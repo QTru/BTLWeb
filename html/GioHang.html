@@ -57,9 +57,12 @@
                                     Sản phẩm
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownSP">
-                                    <li><a class="dropdown-item" href="../html/SanPham/SanPham_DoBoi.html">Đồ bơi</a></li>
-                                    <li><a class="dropdown-item" href="../html/SanPham/SanPham_PhuKienBoi.html">Phụ kiện bơi</a></li>
-                                    <li><a class="dropdown-item" href="../html/SanPham/SanPham_GiamGia.html">Hàng giảm giá</a></li>
+                                    <li><a class="dropdown-item" href="../html/SanPham/SanPham_DoBoi.html">Đồ bơi</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../html/SanPham/SanPham_PhuKienBoi.html">Phụ kiện
+                                            bơi</a></li>
+                                    <li><a class="dropdown-item" href="../html/SanPham/SanPham_GiamGia.html">Hàng giảm
+                                            giá</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -69,11 +72,12 @@
                                 <a class="nav-link" href="../html/LienHe.html" aria-current="page">Liên hệ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../html/DangNhap.html"> <i class="fas fa-user me-1"></i> Đăng
-                                    nhập</a>
+                                <a class="nav-link" href="../html/DangKy.html"> <i class="fas fa-user me-1"></i> Đăng
+                                    ký</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="../html/GioHang.html"> <i class="fas fa-shopping-cart me-1"></i> Giỏ
+                                <a class="nav-link active" href="../html/GioHang.html"> <i
+                                        class="fas fa-shopping-cart me-1"></i> Giỏ
                                     hàng</a>
                             </li>
                         </ul>
@@ -99,7 +103,8 @@
                                 </div>
                             </div>
                             <div class="col-4 d-flex align-items-center justify-content-end  ">
-                                <input type="number" class="form-control mb-1" value="1" min="1" style="width: 150px; padding-left: 15%;">
+                                <input type="number" class="form-control mb-1" value="1" min="1"
+                                    style="width: 150px; padding-left: 15%;">
                                 <div class="text-start ms-5">
                                     <h5>450.000₫</h5>
                                 </div>
@@ -127,49 +132,57 @@
             </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="mt-5">
-            <div class="row py-5 mx-auto text-light" style="background-color: #e74c3c;">
+        <!-- Thêm phần đăng ký nhận ưu đãi -->
+        <footer>
+            <div class="row py-5 mx-auto text-light mt-5" style="background-color: #e74c3c;">
                 <div class="col-4 mx-auto">
                     <h4 class=" fw-normal text-nowrap">Đăng ký ngay để được giảm 200k đơn tiếp theo</h4>
-                    <form>
-                        <input class="form-control mt-3 text-light ps-3" type="text" name="Email" id="Email"
+                    <form id="registerForm">
+                        <input class="form-control mt-3 text-light ps-3" type="email" name="Email" id="emailInput"
                             style="border-radius: 0; border: 4px solid #e08898; background-color: #e74c3c;"
                             placeholder="Nhập email của bạn ở đây">
+                        <!-- Thêm thông báo lỗi -->
+                        <div id="errorMessage" style="color: white; display: none; margin-top: 5px;">
+                            Vui lòng nhập địa chỉ email hợp lệ!
+                        </div>
                         <button class="btn w-100 btn-light mt-3" type="submit"
-                            style="border-radius: 0 12px 0 0; color: #e74c3c;">Đăng
-                            ký
-                            ngay</button>
+                            style="border-radius: 0 12px 0 0; color: #e74c3c;">Đăng ký ngay</button>
                     </form>
                 </div>
             </div>
             <div class="row py-5 mx-auto px-xl-5 text-nowrap" style="background-color: #101c2c;">
                 <div class="col-2 mx-auto">
                     <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Mua sắm</h4>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham.html">Nữ</a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham.html">Nam</a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham.html">Phụ kiện</a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham.html">Giảm giá</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/SanPham/SanPham_DoBoi.html">Đồ
+                        bơi</a>
+                    <a class="link-secondary d-block text-decoration-none"
+                        href="../html/SanPham/SanPham_PhuKienBoi.html">Phụ kiện</a>
+                    <a class="link-secondary d-block text-decoration-none"
+                        href="../html/SanPham/SanPham_GiamGia.html">Giảm giá</a>
                 </div>
                 <div class="col-2 mx-auto">
                     <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Thông tin</h4>
                     <a class="link-secondary d-block text-decoration-none" href="../html/HoiDap.html">Hỏi đáp</a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/GiaoTra.html">Giao hàng & Trả
+                    <a class="link-secondary d-block text-decoration-none" href="../html/GiaoTra.html">Giao hàng &
+                        Trả
                         hàng</a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/ChinhSach.html">Chính sách cửa
+                    <a class="link-secondary d-block text-decoration-none" href="../html/ChinhSach.html">Chính sách
+                        cửa
                         hàng </a>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/ThanhToan.html">Phương thức
+                    <a class="link-secondary d-block text-decoration-none" href="../html/ChinhSach.html">Phương thức
                         thanh toán</a>
                 </div>
                 <div class="col-2 mx-auto">
                     <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Khám phá</h4>
-                    <a class="link-secondary d-block text-decoration-none" href="../html/GioiThieu.html">Giới thiệu</a>
+                    <a class="link-secondary d-block text-decoration-none" href="../html/GioiThieu.html">Giới
+                        thiệu</a>
                     <a class="link-secondary d-block text-decoration-none" href="../html/LienHe.html">Liên hệ</a>
                     <a class="link-secondary d-block text-decoration-none" href="../html/LienHe.html">Đại lý</a>
                 </div>
                 <div class="col-2 mx-auto">
                     <h4 class="pb-2 fw-normal" style="color: #e74c3c;">Dịch vụ khách hàng</h4>
-                    <a class="link-secondary d-block text-decoration-none" href="tel:0999-123-456">Điện thoại: 0999 123
+                    <a class="link-secondary d-block text-decoration-none" href="tel:0999-123-456">Điện thoại: 0999
+                        123
                         456</a>
                     <a class="link-secondary d-block text-decoration-none" href="mailto:buiquoctru@gmail.com">Email:
                         buiquoctru@gmail.com</a>
@@ -178,45 +191,45 @@
         </footer>
     </div>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Hiển thị giỏ hàng khi trang được tải
-        displayCartItems();
-        
-        // Sự kiện xóa sản phẩm
-        document.addEventListener('click', function(e) {
-            if (e.target.classList.contains('btn-outline-danger') && e.target.textContent === 'Xóa') {
-                const productId = e.target.getAttribute('data-id');
-                removeFromCart(productId);
-            }
-        });
+        document.addEventListener('DOMContentLoaded', function () {
+            // Hiển thị giỏ hàng khi trang được tải
+            displayCartItems();
 
-        // Sự kiện xóa tất cả
-        document.querySelector('.btn-outline-danger[style="width: 150px;"]').addEventListener('click', clearCart);
+            // Sự kiện xóa sản phẩm
+            document.addEventListener('click', function (e) {
+                if (e.target.classList.contains('btn-outline-danger') && e.target.textContent === 'Xóa') {
+                    const productId = e.target.getAttribute('data-id');
+                    removeFromCart(productId);
+                }
+            });
 
-        // Sự kiện thay đổi số lượng
-        document.addEventListener('change', function(e) {
-            if (e.target.tagName === 'INPUT' && e.target.type === 'number' && e.target.closest('.cart-item')) {
-                const productId = e.target.closest('.cart-item').getAttribute('data-id');
-                const newQuantity = parseInt(e.target.value);
-                updateQuantity(productId, newQuantity);
-            }
-        });
+            // Sự kiện xóa tất cả
+            document.querySelector('.btn-outline-danger[style="width: 150px;"]').addEventListener('click', clearCart);
 
-        // Hàm hiển thị giỏ hàng
-        function displayCartItems() {
-            const cartContainer = document.querySelector('.cartContainer');
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            
-            if (cart.length === 0) {
-                cartContainer.innerHTML = '<p class="text-white">Giỏ hàng của bạn đang trống</p>';
-                updateTotal();
-                return;
-            }
+            // Sự kiện thay đổi số lượng
+            document.addEventListener('change', function (e) {
+                if (e.target.tagName === 'INPUT' && e.target.type === 'number' && e.target.closest('.cart-item')) {
+                    const productId = e.target.closest('.cart-item').getAttribute('data-id');
+                    const newQuantity = parseInt(e.target.value);
+                    updateQuantity(productId, newQuantity);
+                }
+            });
 
-            let html = '';
-            cart.forEach(item => {
-                // Chỉ hiển thị giá đã giảm (price), không hiển thị originalPrice
-                html += `
+            // Hàm hiển thị giỏ hàng
+            function displayCartItems() {
+                const cartContainer = document.querySelector('.cartContainer');
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                if (cart.length === 0) {
+                    cartContainer.innerHTML = '<p class="text-white">Giỏ hàng của bạn đang trống</p>';
+                    updateTotal();
+                    return;
+                }
+
+                let html = '';
+                cart.forEach(item => {
+                    // Chỉ hiển thị giá đã giảm (price), không hiển thị originalPrice
+                    html += `
                     <div class="cart-item" data-id="${item.id}">
                         <div class="row align-items-center">
                             <div class="col-5 d-flex align-items-center">
@@ -238,58 +251,89 @@
                         </div>
                     </div>
                 `;
-            });
+                });
 
-            cartContainer.innerHTML = html;
-            updateTotal();
-        }
+                cartContainer.innerHTML = html;
+                updateTotal();
+            }
 
-        // Hàm xóa sản phẩm
-        function removeFromCart(productId) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart = cart.filter(item => item.id !== productId);
-            localStorage.setItem('cart', JSON.stringify(cart));
-            displayCartItems();
-        }
-
-        // Hàm xóa tất cả
-        function clearCart() {
-            localStorage.removeItem('cart');
-            displayCartItems();
-        }
-
-        // Hàm cập nhật số lượng
-        function updateQuantity(productId, newQuantity) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const item = cart.find(item => item.id === productId);
-            
-            if (item) {
-                item.quantity = newQuantity;
+            // Hàm xóa sản phẩm
+            function removeFromCart(productId) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart = cart.filter(item => item.id !== productId);
                 localStorage.setItem('cart', JSON.stringify(cart));
                 displayCartItems();
             }
-        }
 
-        // Hàm tính tổng hóa đơn
-        function updateTotal() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            
-            document.querySelector('.total-section h4').textContent = `Tổng hóa đơn: ${total.toLocaleString('vi-VN')}₫`;
-        }
-
-        // Sự kiện thanh toán
-        document.querySelector('.btn-danger[style="width: 150px;"]').addEventListener('click', function() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            if (cart.length === 0) {
-                alert('Giỏ hàng của bạn đang trống!');
-                return;
+            // Hàm xóa tất cả
+            function clearCart() {
+                localStorage.removeItem('cart');
+                displayCartItems();
             }
-            alert('Đã gửi đơn hàng thành công!');
-            clearCart();
+
+            // Hàm cập nhật số lượng
+            function updateQuantity(productId, newQuantity) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const item = cart.find(item => item.id === productId);
+
+                if (item) {
+                    item.quantity = newQuantity;
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    displayCartItems();
+                }
+            }
+
+            // Hàm tính tổng hóa đơn
+            function updateTotal() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+                document.querySelector('.total-section h4').textContent = `Tổng hóa đơn: ${total.toLocaleString('vi-VN')}₫`;
+            }
+
+            // Sự kiện thanh toán
+            document.querySelector('.btn-danger[style="width: 150px;"]').addEventListener('click', function () {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                if (cart.length === 0) {
+                    alert('Giỏ hàng của bạn đang trống!');
+                    return;
+                }
+                alert('Đã gửi đơn hàng thành công!');
+                clearCart();
+            });
         });
-    });
-</script>
+
+        // Gắn sự kiện kiểm tra email cho form đăng ký
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Ngăn form submit mặc định
+
+            const emailInput = document.getElementById('emailInput');
+            const errorMessage = document.getElementById('errorMessage');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(emailInput.value)) {
+                // Email không hợp lệ
+                errorMessage.style.display = 'block';
+                emailInput.style.borderColor = '#ff0000'; // Đổi màu border sang đỏ
+            } else {
+                // Email hợp lệ
+                errorMessage.style.display = 'none';
+                emailInput.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
+
+                // Hiển thị thông báo thành công
+                alert('Đăng ký thành công! Cảm ơn bạn đã đăng ký nhận ưu đãi.');
+
+                // Reset form
+                this.reset();
+            }
+        });
+
+        // Thêm sự kiện khi người dùng nhập để ẩn thông báo lỗi
+        document.getElementById('emailInput').addEventListener('input', function () {
+            document.getElementById('errorMessage').style.display = 'none';
+            this.style.borderColor = '#e08898'; // Trả lại màu border ban đầu
+        });
+    </script>
 </body>
 
 </html>
