@@ -1,0 +1,260 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Quần bơi nam Sporty Pro Xanh Xám",
+            "type": "doboinam",
+            "price": 450000,
+            "image": "../../imgs/imgs_SanPham/doboinam1.jpg",
+            "discount": false,
+            "new": false,
+            "originalPrice": null,
+            "description": "Quần bơi nam Sporty Pro mang đến sự thoải mái tối đa cho mọi hoạt động bơi lội. Với thiết kế ôm sát, sản phẩm giúp giảm lực cản nước, hỗ trợ di chuyển linh hoạt. Chất liệu cao cấp đảm bảo độ bền và khả năng khô nhanh, phù hợp cho cả bơi giải trí lẫn thi đấu. Sản phẩm lý tưởng cho những ai yêu thích phong cách thể thao năng động và hiệu suất cao.",
+            "info": {
+                "material": "Polyester và Spandex",
+                "features": "Chống trượt, khô nhanh, chống tia UV",
+                "usage": "Bơi lội giải trí, thi đấu, tập luyện"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Quần bơi nam Active Navy Đen Vàng",
+            "type": "doboinam",
+            "price": 550000,
+            "image": "../../imgs/imgs_SanPham/doboinam2.jpg",
+            "discount": false,
+            "new": false,
+            "originalPrice": null,
+            "description": "Quần bơi nam Active Navy được thiết kế dành cho những người yêu thích sự năng động và phong cách. Sản phẩm mang lại cảm giác nhẹ nhàng, thoải mái khi bơi, với khả năng kháng nước hiệu quả. Chất liệu cao cấp giúp duy trì độ bền qua nhiều lần sử dụng, đồng thời hỗ trợ vận động tự do. Đây là lựa chọn hoàn hảo cho các buổi bơi lội hoặc hoạt động thể thao dưới nước.",
+            "info": {
+                "material": "Nylon và Elastane",
+                "features": "Đàn hồi tốt, chống thấm, thoáng khí",
+                "usage": "Bơi lội, thể thao dưới nước, giải trí"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Quần bơi nam Champion Vàng Đen",
+            "type": "doboinam",
+            "price": 600000,
+            "image": "../../imgs/imgs_SanPham/doboinam3.jpg",
+            "discount": true,
+            "new": false,
+            "originalPrice": 750000,
+            "description": "Quần bơi nam Champion mang phong cách thể thao chuyên nghiệp, giúp tối ưu hóa hiệu suất khi bơi. Thiết kế tinh tế kết hợp với chất liệu cao cấp, sản phẩm đảm bảo độ bền và khả năng khô nhanh vượt trội. Phù hợp cho cả luyện tập và thi đấu, quần bơi này mang lại sự tự tin và thoải mái trong mọi chuyển động, là lựa chọn lý tưởng cho các vận động viên.",
+            "info": {
+                "material": "Polyester và Lycra",
+                "features": "Chống mài mòn, giảm lực cản, khô nhanh",
+                "usage": "Bơi thi đấu, luyện tập chuyên nghiệp"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Quần bơi nam Basic Xanh Dương Đậm",
+            "type": "doboinam",
+            "price": 350000,
+            "image": "../../imgs/imgs_SanPham/doboinam4.jpg",
+            "discount": false,
+            "new": false,
+            "originalPrice": null,
+            "description": "Quần bơi nam Basic là sự lựa chọn hoàn hảo cho những ai tìm kiếm sự đơn giản nhưng hiệu quả. Sản phẩm được thiết kế để mang lại sự thoải mái tối đa, với chất liệu nhẹ và bền, hỗ trợ mọi hoạt động dưới nước. Dù là bơi lội giải trí hay tập luyện nhẹ nhàng, quần bơi này luôn đảm bảo cảm giác dễ chịu và phong cách tối giản nhưng cuốn hút.",
+            "info": {
+                "material": "Polyester",
+                "features": "Nhẹ, bền, dễ bảo quản",
+                "usage": "Bơi lội giải trí, tập luyện nhẹ"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Quần bơi nam Pro Đen Bạc",
+            "type": "doboinam",
+            "price": 500000,
+            "image": "../../imgs/imgs_SanPham/doboinam5.jpg",
+            "discount": false,
+            "new": true,
+            "originalPrice": null,
+            "description": "Quần bơi nam Pro là sản phẩm cao cấp dành cho những người đam mê bơi lội chuyên nghiệp. Với thiết kế hiện đại, sản phẩm giúp giảm lực cản nước và tối ưu hóa tốc độ. Chất liệu mềm mại, co giãn tốt mang lại cảm giác thoải mái trong thời gian dài. Đây là lựa chọn lý tưởng cho các vận động viên hoặc những ai muốn nâng cao trải nghiệm bơi lội của mình.",
+            "info": {
+                "material": "Nylon và Spandex",
+                "features": "Co giãn 4 chiều, chống tia UV, khô nhanh",
+                "usage": "Bơi thi đấu, luyện tập chuyên sâu"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Quần bơi nam Elite Xanh Dương",
+            "type": "doboinam",
+            "price": 650000,
+            "image": "../../imgs/imgs_SanPham/doboinam6.jpg",
+            "discount": false,
+            "new": false,
+            "originalPrice": null,
+            "description": "Quần bơi nam Elite được thiết kế để đáp ứng nhu cầu của những người yêu thích sự hoàn hảo. Sản phẩm nổi bật với độ bền cao, khả năng kháng nước vượt trội và thiết kế ôm sát giúp tăng hiệu suất bơi. Chất liệu cao cấp mang lại cảm giác thoải mái, phù hợp cho cả bơi thi đấu lẫn giải trí. Đây là lựa chọn dành cho những ai muốn thể hiện phong cách đẳng cấp.",
+            "info": {
+                "material": "Polyester và Elastane",
+                "features": "Chống trơn trượt, giảm lực cản, bền lâu",
+                "usage": "Bơi lội thi đấu, tập luyện, giải trí"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Quần bơi nam Sport Xanh Dương",
+            "type": "doboinam",
+            "price": 400000,
+            "image": "../../imgs/imgs_SanPham/doboinam7.jpg",
+            "discount": true,
+            "new": false,
+            "originalPrice": 550000,
+            "description": "Quần bơi nam Sport mang đến sự kết hợp hoàn hảo giữa phong cách và hiệu suất. Với thiết kế năng động, sản phẩm giúp bạn tự tin trong mọi hoạt động dưới nước. Chất liệu nhẹ, co giãn tốt và khô nhanh đảm bảo sự thoải mái tối đa. Phù hợp cho cả bơi lội giải trí và tập luyện, đây là sản phẩm không thể thiếu cho những người yêu thích thể thao.",
+            "info": {
+                "material": "Nylon và Lycra",
+                "features": "Khô nhanh, co giãn tốt, chống tia UV",
+                "usage": "Bơi lội giải trí, tập luyện"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Quần bơi nam Premium Đen Camo",
+            "type": "doboinam",
+            "price": 580000,
+            "image": "../../imgs/imgs_SanPham/doboinam8.jpg",
+            "discount": true,
+            "new": false,
+            "originalPrice": 700000,
+            "description": "Quần bơi nam Premium mang phong cách mạnh mẽ, lý tưởng cho những ai muốn nổi bật khi bơi lội. Sản phẩm được thiết kế với chất liệu cao cấp, giúp giảm lực cản và tăng độ bền. Độ co giãn tốt cùng khả năng khô nhanh mang lại sự thoải mái tối ưu. Phù hợp cho cả thi đấu và giải trí, quần bơi này là lựa chọn tuyệt vời cho mọi tín đồ thể thao.",
+            "info": {
+                "material": "Polyester và Spandex",
+                "features": "Chống mài mòn, khô nhanh, giảm lực cản",
+                "usage": "Bơi thi đấu, giải trí, tập luyện"
+            }
+        },
+        {
+            "id": 9,
+            "name": "Bộ bơi nữ Elegance Đen Xám",
+            "type": "doiboinu",
+            "price": 850000,
+            "image": "../../imgs/imgs_SanPham/doboinu1.jpg",
+            "discount": false,
+            "new": true,
+            "originalPrice": null,
+            "description": "Bộ bơi nữ Elegance mang đến sự tinh tế và thoải mái cho phái đẹp. Thiết kế ôm sát cơ thể giúp tôn dáng và hỗ trợ chuyển động linh hoạt dưới nước. Chất liệu cao cấp, mềm mại và bền bỉ đảm bảo sự dễ chịu trong suốt thời gian bơi. Sản phẩm phù hợp cho cả bơi lội giải trí và các hoạt động thể thao dưới nước, mang lại phong cách thanh lịch.",
+            "info": {
+                "material": "Nylon và Elastane",
+                "features": "Co giãn tốt, chống tia UV, khô nhanh",
+                "usage": "Bơi lội giải trí, tập luyện, thể thao dưới nước"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Bộ bơi nữ Summer Xanh Tím",
+            "type": "doiboinu",
+            "price": 700000,
+            "image": "../../imgs/imgs_SanPham/doboinu2.jpg",
+            "discount": true,
+            "new": false,
+            "originalPrice": 900000,
+            "description": "Bộ bơi nữ Summer là lựa chọn lý tưởng cho những ngày năng động bên hồ bơi. Với thiết kế hiện đại, sản phẩm mang lại cảm giác thoải mái và tự tin khi bơi. Chất liệu cao cấp giúp kháng nước và khô nhanh, phù hợp cho cả bơi lội giải trí và tập luyện. Bộ bơi này kết hợp phong cách thời thượng và hiệu suất, giúp bạn tỏa sáng trong mọi hoạt động.",
+            "info": {
+                "material": "Polyester và Lycra",
+                "features": "Khô nhanh, chống trượt, co giãn 4 chiều",
+                "usage": "Bơi lội giải trí, tập luyện"
+            }
+        },
+        {
+            "id": 11,
+            "name": "Bộ bơi nữ Fashion Đen Cam",
+            "type": "doiboinu",
+            "price": 950000,
+            "image": "../../imgs/imgs_SanPham/doboinu3.jpg",
+            "discount": false,
+            "new": false,
+            "originalPrice": null,
+            "description": "Bộ bơi nữ Fashion mang phong cách thời trang và đẳng cấp, phù hợp cho những ai muốn nổi bật. Thiết kế tinh tế, ôm sát cơ thể giúp tôn dáng và hỗ trợ vận động linh hoạt. Chất liệu cao cấp đảm bảo độ bền và khả năng khô nhanh, mang lại sự thoải mái tối đa. Sản phẩm lý tưởng cho bơi lội giải trí hoặc các hoạt động thể thao dưới nước đầy phong cách.",
+            "info": {
+                "material": "Nylon và Spandex",
+                "features": "Chống tia UV, co giãn tốt, bền bỉ",
+                "usage": "Bơi lội giải trí, thể thao dưới nước"
+            }
+        },
+        {
+            "id": 12,
+            "name": "Bộ bơi nữ Active Sọc Trắng đen",
+            "type": "doiboinu",
+            "price": 650000,
+            "image": "../../imgs/imgs_SanPham/doboinu4.jpg",
+            "discount": true,
+            "new": false,
+            "originalPrice": 800000,
+            "description": "Bộ bơi nữ Active được thiết kế dành cho những người yêu thích sự năng động. Sản phẩm mang lại cảm giác thoải mái, hỗ trợ vận động linh hoạt dưới nước. Chất liệu nhẹ, co giãn tốt và khô nhanh giúp bạn tự tin trong mọi hoạt động bơi lội. Phù hợp cho cả tập luyện và giải trí, bộ bơi này là lựa chọn hoàn hảo cho phong cách thể thao hiện đại.",
+            "info": {
+                "material": "Polyester và Elastane",
+                "features": "Khô nhanh, co giãn tốt, chống trượt",
+                "usage": "Bơi lội giải trí, tập luyện"
+            }
+        },
+        {
+            "id": 13,
+            "name": "Bộ bơi nữ Luxury Cao Cấp Xanh Lá",
+            "type": "doiboinu",
+            "price": 780000,
+            "image": "../../imgs/imgs_SanPham/doboinu5.jpg",
+            "discount": false,
+            "new": false,
+            "originalPrice": null,
+            "description": "Bộ bơi nữ Luxury mang đến sự sang trọng và thoải mái cho phái đẹp. Với thiết kế tinh xảo, sản phẩm giúp tôn dáng và hỗ trợ chuyển động linh hoạt. Chất liệu cao cấp, mềm mại và bền bỉ đảm bảo sự dễ chịu trong suốt thời gian bơi. Phù hợp cho bơi lội giải trí hoặc các hoạt động thể thao, bộ bơi này là biểu tượng của phong cách và chất lượng.",
+            "info": {
+                "material": "Nylon và Lycra",
+                "features": "Chống tia UV, co giãn 4 chiều, khô nhanh",
+                "usage": "Bơi lội giải trí, thể thao dưới nước"
+            }
+        },
+        {
+            "id": 14,
+            "name": "Bộ bơi nữ Basic Đen Sọc Trắng",
+            "type": "doiboinu",
+            "price": 550000,
+            "image": "../../imgs/imgs_SanPham/doboinu6.jpg",
+            "discount": true,
+            "new": false,
+            "originalPrice": 700000,
+            "description": "Bộ bơi nữ Basic mang phong cách tối giản nhưng không kém phần cuốn hút. Sản phẩm được thiết kế để mang lại sự thoải mái và hỗ trợ vận động linh hoạt. Chất liệu nhẹ, bền và khô nhanh đảm bảo cảm giác dễ chịu trong mọi hoạt động bơi lội. Phù hợp cho cả giải trí và tập luyện, bộ bơi này là lựa chọn lý tưởng cho những ai yêu thích sự đơn giản.",
+            "info": {
+                "material": "Polyester",
+                "features": "Nhẹ, bền, khô nhanh",
+                "usage": "Bơi lội giải trí, tập luyện nhẹ"
+            }
+        },
+        {
+            "id": 15,
+            "name": "Bộ bơi nữ Premium Hồng Xanh",
+            "type": "doiboinu",
+            "price": 920000,
+            "image": "../../imgs/imgs_SanPham/doboinu7.jpg",
+            "discount": false,
+            "new": true,
+            "originalPrice": null,
+            "description": "Bộ bơi nữ Premium là sự kết hợp hoàn hảo giữa thời trang và hiệu suất. Thiết kế hiện đại, ôm sát cơ thể giúp tôn dáng và hỗ trợ vận động linh hoạt. Chất liệu cao cấp mang lại độ bền và khả năng khô nhanh, mang lại sự thoải mái tối đa. Sản phẩm lý tưởng cho bơi lội giải trí hoặc các hoạt động thể thao, giúp bạn tự tin tỏa sáng trong mọi khoảnh khắc.",
+            "info": {
+                "material": "Nylon và Spandex",
+                "features": "Chống tia UV, co giãn tốt, khô nhanh",
+                "usage": "Bơi lội giải trí, thể thao dưới nước"
+            }
+        },
+        {
+            "id": 16,
+            "name": "Bộ bơi nữ Sporty Xanh Dương Đậm",
+            "type": "doiboinu",
+            "price": 600000,
+            "image": "../../imgs/imgs_SanPham/doboinu8.jpg",
+            "discount": false,
+            "new": false,
+            "originalPrice": null,
+            "description": "Bộ bơi nữ Sporty được thiết kế dành cho những người yêu thích phong cách thể thao năng động. Sản phẩm mang lại sự thoải mái và hỗ trợ vận động linh hoạt dưới nước. Chất liệu nhẹ, co giãn tốt và khô nhanh đảm bảo cảm giác dễ chịu trong mọi hoạt động. Phù hợp cho cả bơi lội giải trí và tập luyện, bộ bơi này là lựa chọn hoàn hảo cho phái đẹp.",
+            "info": {
+                "material": "Polyester và Elastane",
+                "features": "Khô nhanh, co giãn tốt, chống trượt",
+                "usage": "Bơi lội giải trí, tập luyện"
+            }
+        }
+    ]
+}

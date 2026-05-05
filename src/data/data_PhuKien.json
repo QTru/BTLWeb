@@ -1,0 +1,260 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Kính bơi trẻ em AquaLite Xanh Dương",
+            "type": "kinhboi",
+            "price": 260000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham1.jpg",
+            "discount": false,
+            "new": false,
+            "description": "Kính bơi trẻ em AquaLite được thiết kế dành riêng cho các bé yêu thích bơi lội. Sản phẩm mang lại tầm nhìn rõ nét dưới nước, với lớp kính chống sương mù và chống tia UV, đảm bảo an toàn và thoải mái. Dây đeo điều chỉnh dễ dàng giúp kính ôm sát, không gây khó chịu. Phù hợp cho các buổi học bơi hoặc vui chơi tại hồ bơi, sản phẩm này là bạn đồng hành lý tưởng cho trẻ.",
+            "info": {
+                "material": "Polycarbonate và Silicone",
+                "features": "Chống sương mù, chống tia UV, dây đeo điều chỉnh",
+                "usage": "Bơi lội giải trí, học bơi cho trẻ em"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Kính bơi truyền thống FitView Trắng Đen",
+            "type": "kinhboi",
+            "price": 270000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham2.jpg",
+            "discount": false,
+            "new": false,
+            "description": "Kính bơi FitView mang phong cách truyền thống, phù hợp cho mọi đối tượng yêu thích bơi lội. Sản phẩm được trang bị lớp kính chống sương mù và chống tia UV, mang lại tầm nhìn sắc nét và an toàn. Dây đeo mềm mại, dễ điều chỉnh đảm bảo sự thoải mái trong thời gian dài. Đây là lựa chọn lý tưởng cho các buổi bơi giải trí hoặc tập luyện nhẹ nhàng tại hồ bơi.",
+            "info": {
+                "material": "Polycarbonate và Silicone",
+                "features": "Chống sương mù, chống tia UV, bền bỉ",
+                "usage": "Bơi lội giải trí, tập luyện nhẹ"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Kính bơi người lớn ProRacer Đỏ Đen",
+            "type": "kinhboi",
+            "price": 400000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham3.jpg",
+            "discount": false,
+            "new": true,
+            "description": "Kính bơi ProRacer dành cho những người đam mê bơi lội chuyên nghiệp. Với thiết kế khí động học, sản phẩm giúp giảm lực cản và mang lại tầm nhìn rõ nét dưới nước. Lớp kính chống sương mù và chống tia UV đảm bảo an toàn và hiệu suất cao. Dây đeo chắc chắn, dễ điều chỉnh mang lại sự thoải mái tối đa, phù hợp cho thi đấu hoặc luyện tập chuyên sâu.",
+            "info": {
+                "material": "Polycarbonate và Silicone",
+                "features": "Chống sương mù, chống tia UV, giảm lực cản",
+                "usage": "Bơi thi đấu, luyện tập chuyên nghiệp"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Kính bơi chuyên nghiệp SpeedEdge Xám Đen",
+            "type": "kinhboi",
+            "price": 150000,
+            "originalPrice": 250000,
+            "image": "../../imgs/imgs_SanPham/sanpham4.jpg",
+            "discount": true,
+            "new": false,
+            "description": "Kính bơi SpeedEdge là lựa chọn hoàn hảo cho các vận động viên bơi lội. Sản phẩm được thiết kế để tối ưu hóa hiệu suất, với lớp kính chống sương mù và chống tia UV, mang lại tầm nhìn rõ ràng. Dây đeo mềm mại, dễ điều chỉnh đảm bảo sự thoải mái và chắc chắn khi sử dụng. Phù hợp cho thi đấu hoặc luyện tập, kính bơi này mang đến sự tự tin và phong cách.",
+            "info": {
+                "material": "Polycarbonate và Silicone",
+                "features": "Chống sương mù, chống tia UV, dây đeo bền",
+                "usage": "Bơi thi đấu, luyện tập chuyên sâu"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Mũ bơi silicon 3D Xanh Đậm Loang",
+            "type": "muboi",
+            "price": 300000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham5.jpg",
+            "discount": false,
+            "new": false,
+            "description": "Mũ bơi silicon 3D mang đến sự thoải mái và hiệu suất cao cho người sử dụng. Với thiết kế ôm sát, sản phẩm giúp giảm lực cản nước và bảo vệ tóc khỏi clo. Chất liệu silicon cao cấp, mềm mại và bền bỉ đảm bảo sự dễ chịu trong thời gian dài. Phù hợp cho cả bơi lội giải trí và luyện tập, mũ bơi này là lựa chọn lý tưởng cho mọi tín đồ bơi lội.",
+            "info": {
+                "material": "Silicone cao cấp",
+                "features": "Chống trượt, giảm lực cản, bảo vệ tóc",
+                "usage": "Bơi lội giải trí, luyện tập"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Mũ bơi silicon đen truyền thống",
+            "type": "muboi",
+            "price": 160000,
+            "originalPrice": 200000,
+            "image": "../../imgs/imgs_SanPham/sanpham6.jpg",
+            "discount": true,
+            "new": false,
+            "description": "Mũ bơi silicon truyền thống là sản phẩm thiết yếu cho mọi người yêu thích bơi lội. Với thiết kế đơn giản nhưng hiệu quả, mũ giúp bảo vệ tóc và giảm lực cản nước. Chất liệu silicon mềm mại, co giãn tốt mang lại sự thoải mái và độ bền cao. Phù hợp cho các buổi bơi giải trí hoặc tập luyện nhẹ, sản phẩm này là lựa chọn tiết kiệm nhưng chất lượng.",
+            "info": {
+                "material": "Silicone",
+                "features": "Co giãn tốt, bảo vệ tóc, chống trượt",
+                "usage": "Bơi lội giải trí, tập luyện nhẹ"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Mũ bơi silicon 2 màu Xanh Trắng",
+            "type": "muboi",
+            "price": 280000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham7.jpg",
+            "discount": false,
+            "new": true,
+            "description": "Mũ bơi silicon 2 màu mang phong cách hiện đại, phù hợp cho những ai muốn kết hợp hiệu suất và thời trang. Sản phẩm được thiết kế ôm sát, giúp giảm lực cản và bảo vệ tóc hiệu quả. Chất liệu silicon cao cấp đảm bảo độ bền và sự thoải mái khi sử dụng. Phù hợp cho cả bơi lội giải trí và luyện tập, mũ bơi này mang lại sự tự tin và phong cách.",
+            "info": {
+                "material": "Silicone cao cấp",
+                "features": "Chống trượt, giảm lực cản, bền bỉ",
+                "usage": "Bơi lội giải trí, luyện tập"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Mũ bơi silicon trắng bóng đơn giản",
+            "type": "muboi",
+            "price": 180000,
+            "originalPrice": 250000,
+            "image": "../../imgs/imgs_SanPham/sanpham8.jpg",
+            "discount": true,
+            "new": false,
+            "description": "Mũ bơi silicon trắng bóng mang phong cách tối giản, phù hợp cho mọi đối tượng yêu thích bơi lội. Sản phẩm giúp bảo vệ tóc và giảm lực cản nước, với chất liệu silicon mềm mại và co giãn tốt. Thiết kế đơn giản nhưng bền bỉ, mũ bơi này mang lại sự thoải mái và hiệu quả trong mọi hoạt động dưới nước. Lý tưởng cho các buổi bơi giải trí hoặc tập luyện nhẹ.",
+            "info": {
+                "material": "Silicone",
+                "features": "Co giãn tốt, bảo vệ tóc, chống trượt",
+                "usage": "Bơi lội giải trí, tập luyện nhẹ"
+            }
+        },
+        {
+            "id": 9,
+            "name": "Bình nước lọc thông minh BluePure",
+            "type": "binhnuoc",
+            "price": 450000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham9.jpg",
+            "discount": false,
+            "new": true,
+            "description": "Bình nước lọc thông minh BluePure là bạn đồng hành lý tưởng cho các hoạt động thể thao và bơi lội. Sản phẩm được trang bị công nghệ lọc nước tiên tiến, mang lại nguồn nước sạch và an toàn. Thiết kế tiện lợi, dễ cầm nắm và chống rò rỉ đảm bảo sự thoải mái khi sử dụng. Phù hợp cho tập luyện, dã ngoại hoặc sử dụng hàng ngày, bình nước này kết hợp công nghệ và phong cách.",
+            "info": {
+                "material": "Nhựa Tritan và Thép không gỉ",
+                "features": "Lọc nước thông minh, chống rò rỉ, bền bỉ",
+                "usage": "Thể thao, bơi lội, dã ngoại, sử dụng hàng ngày"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Bình nước thể thao AquaTwist Xanh Dương",
+            "type": "binhnuoc",
+            "price": 270000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham10.jpg",
+            "discount": false,
+            "new": true,
+            "description": "Bình nước thể thao AquaTwist được thiết kế dành cho những người yêu thích lối sống năng động. Sản phẩm có thiết kế tiện lợi, dễ cầm nắm và chống rò rỉ, phù hợp cho các buổi tập luyện hoặc bơi lội. Chất liệu an toàn, bền bỉ đảm bảo sử dụng lâu dài. Bình nước này mang lại sự tiện ích và phong cách, là lựa chọn lý tưởng cho mọi hoạt động thể thao.",
+            "info": {
+                "material": "Nhựa Tritan",
+                "features": "Chống rò rỉ, nhẹ, dễ vệ sinh",
+                "usage": "Thể thao, bơi lội, tập luyện"
+            }
+        },
+        {
+            "id": 11,
+            "name": "Bình giữ nhiệt inox FitSteel Bạc",
+            "type": "binhnuoc",
+            "price": 350000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham11.jpg",
+            "discount": false,
+            "new": false,
+            "description": "Bình giữ nhiệt inox FitSteel là sản phẩm hoàn hảo cho những ai cần giữ nước ở nhiệt độ lý tưởng. Sản phẩm có khả năng giữ nóng và lạnh trong thời gian dài, phù hợp cho các buổi tập luyện, bơi lội hoặc dã ngoại. Thiết kế chắc chắn, chống rò rỉ và dễ vệ sinh mang lại sự tiện lợi tối đa. Bình giữ nhiệt này là lựa chọn lý tưởng cho lối sống năng động.",
+            "info": {
+                "material": "Thép không gỉ 304",
+                "features": "Giữ nhiệt lâu, chống rò rỉ, bền bỉ",
+                "usage": "Thể thao, bơi lội, dã ngoại"
+            }
+        },
+        {
+            "id": 12,
+            "name": "Bình nước cầm tay SportMax Đen",
+            "type": "binhnuoc",
+            "price": 400000,
+            "originalPrice": 500000,
+            "image": "../../imgs/imgs_SanPham/sanpham12.jpg",
+            "discount": true,
+            "new": false,
+            "description": "Bình nước cầm tay SportMax mang đến sự tiện lợi cho các hoạt động thể thao và bơi lội. Với thiết kế ergonomics, sản phẩm dễ cầm nắm và chống rò rỉ, phù hợp cho tập luyện hoặc di chuyển. Chất liệu cao cấp, an toàn và bền bỉ đảm bảo sử dụng lâu dài. Bình nước này là lựa chọn lý tưởng cho những ai yêu thích sự năng động và phong cách.",
+            "info": {
+                "material": "Nhựa Tritan và Thép không gỉ",
+                "features": "Chống rò rỉ, nhẹ, bền bỉ",
+                "usage": "Thể thao, bơi lội, tập luyện"
+            }
+        },
+        {
+            "id": 13,
+            "name": "Túi đựng đồ bơi Classic Bag Xanh Trắng",
+            "type": "tuithethao",
+            "price": 400000,
+            "originalPrice": 600000,
+            "image": "../../imgs/imgs_SanPham/sanpham13.jpg",
+            "discount": true,
+            "new": false,
+            "description": "Túi đựng đồ bơi Classic Bag là phụ kiện không thể thiếu cho những ai yêu thích bơi lội. Với thiết kế rộng rãi, sản phẩm giúp bạn dễ dàng mang theo quần áo, kính bơi và các vật dụng cần thiết. Chất liệu chống thấm nước và bền bỉ đảm bảo đồ dùng luôn khô ráo. Phù hợp cho tập luyện, thi đấu hoặc dã ngoại, túi này mang lại sự tiện lợi và phong cách.",
+            "info": {
+                "material": "Polyester chống thấm",
+                "features": "Chống thấm nước, nhiều ngăn, bền bỉ",
+                "usage": "Bơi lội, thể thao, dã ngoại"
+            }
+        },
+        {
+            "id": 14,
+            "name": "Ba lô thể thao UrbanFit Xanh Đen",
+            "type": "tuithethao",
+            "price": 540000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham14.jpg",
+            "discount": false,
+            "new": true,
+            "description": "Ba lô thể thao UrbanFit là sự lựa chọn hoàn hảo cho những người yêu thích sự năng động. Sản phẩm có thiết kế hiện đại, với nhiều ngăn tiện lợi để đựng đồ bơi, giày thể thao và các vật dụng cá nhân. Chất liệu chống thấm và bền bỉ đảm bảo sử dụng lâu dài. Phù hợp cho tập luyện, bơi lội hoặc du lịch, ba lô này mang lại sự tiện ích và phong cách.",
+            "info": {
+                "material": "Nylon chống thấm",
+                "features": "Nhiều ngăn, chống thấm, dây đeo êm ái",
+                "usage": "Bơi lội, thể thao, du lịch"
+            }
+        },
+        {
+            "id": 15,
+            "name": "Túi xách thể thao đa năng GymPro Xám Đen",
+            "type": "tuithethao",
+            "price": 450000,
+            "originalPrice": null,
+            "image": "../../imgs/imgs_SanPham/sanpham15.jpg",
+            "discount": false,
+            "new": true,
+            "description": "Túi xách thể thao đa năng GymPro là phụ kiện lý tưởng cho những ai yêu thích lối sống năng động. Với thiết kế đa năng, sản phẩm có thể chứa đồ bơi, quần áo tập và các vật dụng cá nhân. Chất liệu chống thấm và bền bỉ đảm bảo đồ dùng luôn an toàn. Phù hợp cho bơi lội, tập gym hoặc du lịch, túi xách này mang lại sự tiện lợi và phong cách hiện đại.",
+            "info": {
+                "material": "Polyester chống thấm",
+                "features": "Chống thấm, nhiều ngăn, dây đeo chắc chắn",
+                "usage": "Bơi lội, tập gym, du lịch"
+            }
+        },
+        {
+            "id": 16,
+            "name": "Túi rút họa tiết LeafBag Xanh Lá",
+            "type": "tuithethao",
+            "price": 330000,
+            "originalPrice": 400000,
+            "image": "../../imgs/imgs_SanPham/sanpham16.jpg",
+            "discount": true,
+            "new": false,
+            "description": "Túi rút LeafBag mang phong cách trẻ trung, phù hợp cho các hoạt động thể thao và bơi lội. Với thiết kế gọn nhẹ, sản phẩm dễ dàng chứa đồ bơi, giày thể thao hoặc các vật dụng cá nhân. Chất liệu chống thấm và bền bỉ đảm bảo sử dụng lâu dài. Phù hợp cho tập luyện, dã ngoại hoặc sử dụng hàng ngày, túi rút này là lựa chọn tiện lợi và thời trang.",
+            "info": {
+                "material": "Nylon chống thấm",
+                "features": "Gọn nhẹ, chống thấm, dây rút tiện lợi",
+                "usage": "Bơi lội, thể thao, dã ngoại"
+            }
+        }
+    ]
+}
